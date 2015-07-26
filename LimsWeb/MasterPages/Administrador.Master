@@ -1,0 +1,394 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="Administrador.Master.cs" Inherits="LimsWeb.MasterPages.Principal" %>
+
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+    <script src="../Content/js/Reloj.js"></script>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <title>L.A.P.A.  Administrador</title>
+    <link href="../Content/css/ui-lightness/jquery-ui-1.10.4.css" rel="stylesheet" />
+    <script src="../Content/js/jquery-1.10.2.js"></script>
+    <script src="../Content/js/jquery-ui-1.10.4.js"></script>
+    <link href="../Content/css/Colores.css" rel="stylesheet" />
+    <link href="../Content/css/main_fonts.css" rel="stylesheet" />
+
+     <style>
+        * {
+            font-family:Tebuchet MS !important;
+        }
+        .gvGeneral {
+            margin:0;           
+        }
+        .gvCabecera {
+            font-weight:lighter;
+            color:white;
+            text-align:center;  
+        }
+        .gvFilas {
+            text-align:center;
+        }
+
+        .grilla {
+            width:100%;
+            margin:0 auto;
+        }
+
+        .tab {
+            width: 95%;
+            margin: 0 auto;
+        }
+
+        .grupoBotones {
+            margin-top:20px;
+            margin-left:20px;   
+        }
+
+        .btnCerrar {
+    height: 25px;
+    width: 110px;
+    background: #3399ff;
+    font-size: 13px;
+    color: #fff;
+    border: solid 2px #fff;
+    border-radius: 3px;
+    font-family: Calibri;
+    cursor: pointer;
+}
+
+
+
+    * {
+        margin:0;
+        padding:0;
+        font-size:13px;
+        font-family:Arial;
+        }
+
+    .skin0{
+    position:absolute;
+    width:140px;
+    border:2px solid black;
+    background-color:menu;
+    font-family:Verdana;
+    line-height:20px;
+    cursor:default;
+    font-size:14px;
+    z-index:100;
+    visibility:hidden;
+    }
+
+    .menuitems{
+    padding-left:10px;
+    padding-right:10px;
+    font-family:Verdana;
+    font-size:12px;
+    color:black;
+    }
+        
+    .menu {
+    width:560px;
+    display:inline-block; 
+    float:left;
+    /*margin-right:105px;*/
+    background:none;
+    }
+
+    .menu li{
+    list-style:none;
+    display:inline-block;
+    }
+
+    .menu li a {
+    color:white;
+    font-size: 15px;
+    text-decoration:none;
+    text-align:center;
+    width:100%;
+    line-height:38px;
+    padding:10px 15px;
+    }
+
+    .menu li a:hover {
+    border-bottom:4px solid #eee;
+    opacity:0.8;
+    }
+
+       .botoness {
+    color:white;
+    text-decoration:none;
+    text-align:center;
+    width:100%;
+    line-height:20px;
+    padding:1px 15px;
+    border:1px solid #428bca;
+    background:#428bca;
+    }
+
+    .botoness:hover {
+    border-bottom:4px solid #eee inset;
+    opacity:0.8;
+    }
+
+    #cabecera {
+        width:1110px;
+    /*min-width:1360px;*/
+    height:40px;        
+    background:#428bca;
+    float:LEFT;
+    z-index:10;
+    }
+    
+    #datos {float:right;
+    display:inline-block;
+    margin-top:10px;
+    margin-right:10px;
+    width:400px;
+    /*background:yellow;*/
+    color:white;
+    text-align:right;
+    }
+
+    #tvEstructura{
+        margin-top:-12px;
+        height:320px;
+        overflow-y:auto;
+    }
+
+    #treeView {
+    background:#eee;
+    width:250px;
+    height:450px;
+    display:inline-block;
+    border-right:solid 4px #d9d9d9;  
+      
+    }
+
+    #contenido {
+    width:1116px;
+    height:600px;
+        background:#eee;
+        display:inline-block;
+    position:absolute;
+    }
+
+    .listBox {     
+        display:inline-block;
+    }
+
+    #logo {
+    z-index:100;
+    display:inline-block;
+    width:250px;
+    height:90px;
+    background:#eee;
+    background-repeat:no-repeat;
+    background-size:100%;
+    background-position-x:11px;
+    background-position-y:3px;
+    border-right:solid 4px #d9d9d9;      
+    float:left;
+        }
+
+    
+         #publicidad {
+            width:250px;
+            background:yellow;
+            height:250px;
+    /*background-image:url("");*/
+    /*background-size:100%;*/
+         }
+         .tituloInfo {
+            border-bottom: 1px solid gray;
+            padding: 10px 0px;
+            text-align: left;
+            padding-left: 20px;
+            font-weight: bold;
+            opacity: 0.7;
+        }
+            #publicidad  img{
+            width:100%;
+            background:none;
+            height:250px;
+            cursor:pointer;
+            background-size:100%;
+            
+         }
+
+      .treeNode
+        {
+            text-decoration:none;
+            font:14px Calibri;
+            /*background:orange;*/
+            font-weight:bold;
+        }
+        .rootNode
+        {          
+            text-decoration:none;
+            font-size:18px;
+            width:100%;
+            border-bottom:Solid 1px black;
+        }
+        .leafNode
+        {
+            /*border:Dotted 2px black;*/
+            background-color:#eeeeee;
+            font-weight:lighter;
+        }
+
+         #form1 {
+    
+         width:1360px;
+         }
+
+    </style>
+
+    <script>
+        function ShowProducto(url) {
+            window.open(url, 'ventana1', 'top=0,left=300,height=630,width=650,scrollbars=1,resizable=1,location=no');
+        }
+
+        function ShowParametro(url) {
+            <% if (Boolean.Parse(Session["Servicio"].ToString()) == true) { %>
+                if ($("#tvEstructuran0Nodes").children().size() <= 1) {
+                     <% if (Session["PerfilUsuarioID"].ToString() == "2"){ %>
+                        alert("No existen clientes asociados al laboratorio.");
+                    <% } else { %>
+                        alert("Debe agregar un Cliente al laboratorio antes de configurar parámetros.");
+                    <% } %>
+                } else {
+                    window.open(url, 'ventana2', 'top=0,left=300,height=630,width=825,scrollbars=0,resizable=0,location=no');
+                }
+            <% } else { %>
+                window.open(url, 'ventana2', 'top=0,left=300,height=630,width=825,scrollbars=0,resizable=0,location=no');
+            <% } %>
+        }
+
+        function ShowUsuario(url) {
+            window.open(url, 'ventana3', 'top=0,left=300,height=630,width=1000,scrollbars=0,resizable=0,location=no');
+        }
+
+        function ShowAtributo(url) {
+            <% if (Boolean.Parse(Session["Servicio"].ToString()) == true) { %>
+                if ($("#tvEstructuran0Nodes").children().size() <= 1) {
+                    <% if (Session["PerfilUsuarioID"].ToString() == "2"){ %>
+                        alert("No existen clientes asociados al laboratorio.");
+                    <% } else { %>       
+                        alert("Debe agregar un Cliente al laboratorio antes de configurar atributos.");
+                    <% } %>
+                } else {
+                    window.open(url, 'ventana4', 'top=0,left=300,height=510,width=725,scrollbars=0,resizable=0,location=no');
+                }
+            <% } else { %>
+                window.open(url, 'ventana4', 'top=0,left=300,height=510,width=725,scrollbars=0,resizable=0,location=no');
+            <% } %>
+        }
+
+
+        function ShowEquipo(url) {
+            window.open(url, 'ventana5', 'top=0,left=300,height=710,width=725,scrollbars=0,resizable=0,location=no');
+        }
+
+        function ShowCliente(url) {
+            window.open(url, 'ventana6', 'top=0,left=260,height=530,width=1090,scrollbars=0,resizable=0,location=no');
+        }
+
+        function ShowLaboratorio(url) {
+            window.open(url, 'ventana7', 'top=0,left=300,height=630,width=650,scrollbars=1,resizable=1,location=no');
+        }
+
+        function ShowPlanes(url) {
+            window.open(url, 'ventana8', 'top=0,left=180,height=660,width=950,scrollbars=0,resizable=0,location=no');
+        }
+
+    </script>
+    <link href="../Content/css/bootstrap.css" rel="stylesheet" />
+    <asp:ContentPlaceHolder ID="head" runat="server">
+
+    </asp:ContentPlaceHolder>
+
+</head>
+<body style=" background:#eee;">
+    <form id="form1" runat="server">
+        
+    <div id="logo">
+        <img src="../Content/img/lapa.png" style="height:45px; width:245px; margin-left:0px" />
+        
+    </div>   
+
+    <div id="cabecera">
+     <%--<asp:Label ID="Label1" style="float:left" BackColor="Transparent" Width="140" Height="30" Font-Size="Medium" Font-Bold="false" runat="server" /> --%>
+        <script language="JavaScript" type="text/javascript">
+            iniciarReloj()
+           </script> 
+      
+        <div id="datos" style="background:none; width:500px"  > 
+         <asp:Label ID="clock" style="float:left" BackColor="Transparent" Width="100" Height="40" Font-Size="Medium" Font-Bold="false" runat="server" /> 
+         <!--<asp:LinkButton CommandArgument="EN" runat="server" OnClick="cambiaIdioma" ToolTip="Inglés"><img src="../Content/img/flag_en.jpg" /></asp:LinkButton>&nbsp;&nbsp;&nbsp;&nbsp;
+         <asp:LinkButton CommandArgument="ES" runat="server" OnClick="cambiaIdioma" ToolTip="Español"><img src="../Content/img/flag_es.jpg" /></asp:LinkButton>&nbsp;&nbsp;&nbsp;&nbsp;                -->
+         <%= welcome %>, <asp:Label runat="server" ID="lblNombreCompleto" style="display:inline-block" text="[Nombre Completo]" OnSelectedNodeChanged="SelectNode_Click"  ></asp:Label>
+        <asp:Button runat="server" id="btnCerrar" CssClass="btnCerrar" style="margin-left:5px;margin-top:-5px;" Text="Logout" OnClick="btnCerrar_Click"> </asp:Button>
+            </div>
+        <div style="width:1366px;" >
+            <nav class="menu" >
+                <%--<% if (Session["PerfilUsuarioID"].ToString() != "2") { %>--%>
+                    <li><a href="javascript:ShowUsuario('<%= ResolveClientUrl("~/iAdministrador/vUsuarios.aspx")%>');"><%= user %></a></li>
+                <%--<% } %>--%>
+                <li><a href="javascript:ShowProducto('<%= ResolveClientUrl("~/iAdministrador/vProducto.aspx")%>');"><%= product %></a></li>
+                <li><a href="javascript:ShowParametro('<%= ResolveClientUrl("~/iAdministrador/vParametro.aspx")%>');"><%= param %></a></li>
+                <li><a href="javascript:ShowAtributo('<%= ResolveClientUrl("~/iAdministrador/vAtributo.aspx")%>');"><%= atrib %></a></li>
+                
+                <% if(Boolean.Parse(Session["Servicio"].ToString()) == true){
+                       if (Session["PerfilUsuarioID"].ToString() != "2") {
+                 %>
+                    <li><a href="javascript:ShowCliente('<%= ResolveClientUrl("~/iAdministrador/vCliente.aspx")%>');"><%= client %></a></li>
+                <% } } %>
+
+                <% if(Boolean.Parse(Session["Servicio"].ToString()) == false){
+                       if (Session["PerfilUsuarioID"].ToString() != "2") {
+                 %>
+                    <li><a href="javascript:ShowLaboratorio('<%= ResolveClientUrl("~/iAdministrador/vLaboratorios.aspx")%>');"><%= lab %></a></li>
+                <% } } %>
+
+                <li><a href="javascript:ShowPlanes('<%= ResolveClientUrl("~/iAdministrador/vPlanes.aspx")%>');"><%= plan %></a></li>
+                
+            </nav>
+            
+
+       </div>
+    </div>
+        <br />      <br />      <br />      <br />      <br />      
+ 
+    <div style=" width:1366px; position:relative;">
+        <div id="treeView" style="margin-top:-36px;background:none">
+            <asp:TreeView ID="tvEstructura" 
+                    NodeStyle-CssClass="treeNode"
+                    RootNodeStyle-CssClass="rootNode"
+                    LeafNodeStyle-CssClass="leafNode"
+                    runat="server" 
+                    OnSelectedNodeChanged="Select_Change"  ></asp:TreeView>
+           <a href="<%= enlace_1 %>" target="_blank"> <img src="<%= url_1 %>" style="height:250px; width:250px"/></a>
+
+        <%--<div id="publicidad" >
+            <span>djskadjskd</span>
+            <a href="https://play.google.com/store" target="_blank"><img src="../Content/img/pub1.png"/></a>
+        </div>--%>
+
+        </div>
+        <div id="contenido" style="background:none;margin-top:-55px " >
+        <%--    <table>
+                <tr><td> 
+                    <br />--%>
+                    <%--<span id="liveclock" style="text-align:center; padding:3px 14px; top:0;"></span>--%> 
+                    
+ <%--                   </td></tr>
+
+           </table>--%>
+            <asp:ContentPlaceHolder ID="cphAdministrador" runat="server">
+            </asp:ContentPlaceHolder>
+        </div>
+
+    </div>
+    </form>
+</body>
+</html>

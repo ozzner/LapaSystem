@@ -1,0 +1,222 @@
+﻿
+.cuadroProcesos {
+    background: none;
+    width: 46.5%;
+    margin-left: 2%;
+    height: 290px;
+    display: inline-block;
+    border: 1px solid #eee;
+    border-radius: 4px;
+    box-shadow: 2px 2px 5px 2px rgba(188,188,188,0.6);
+}
+
+.contProcesos {
+    background: none;
+    width: 900px;
+    float: none;
+    display: inline-block;
+    margin: 10px;
+    text-align: center;
+}
+
+.tituloProcesos {
+    border-bottom: 1px solid gray;
+    padding: 10px 0px;
+    text-align: left;
+    padding-left: 20px;
+    font-weight: bold;
+    opacity: 0.7;
+}
+
+
+* {
+    font-family: Calibri;
+}
+
+.gvGeneral {
+    margin: 0;
+}
+
+.gvCabecera {
+    font-weight: lighter;
+    color: white;
+    text-align: center;
+    background: #428bca;
+}
+
+.gvFilas {
+    text-align: center;
+}
+
+.grilla {
+    width: 100%;
+    margin: 0 auto;
+}
+
+.tab {
+    width: 95%;
+    margin: 0 auto;
+}
+
+.grupoBotones {
+    margin-top: 20px;
+    margin-left: 20px;
+}
+
+.rowss {
+    border-bottom: solid 1px gray;
+    background: orange;
+}
+
+#btnTerminar {
+    margin-top:10px;
+}
+
+
+
+* {
+    font-family: Calibri;
+}
+
+.gvGeneral {
+    margin: 0;
+}
+
+.gvCabecera {
+    font-weight: lighter;
+    color: white;
+    height: 30px;
+    text-align: center;
+    background: #428bca;
+}
+
+.gvFilas {
+    text-align: center;
+}
+
+.txtBox {
+    border: solid 1px #428bca;
+
+    margin-top: 1px;
+}
+
+
+.grilla {
+    width: 100%;
+    margin: 0 auto;
+}
+
+.tab {
+    width: 95%;
+    margin: 0 auto;
+}
+
+.grupoBotones {
+    margin-top: 20px;
+    margin-left: 20px;
+}
+
+/********************** MY STYLES NULLPOINT.PE **********************/
+
+.opc_atributo, .opc_detalle {
+    /*background: red;*/
+    display: inline-block;
+    vertical-align: top;
+    width: 290px;
+    height:30px;
+    margin-left: 0px;
+}
+
+.opc_atributo {
+    float: right;
+    width:100%;
+    text-align:center;
+}
+
+.opc_detalle {
+    float: left;
+    width:100%;
+    text-align:center;
+}
+
+.lbl_atributo {
+    /*background: yellow;*/
+    float:left;
+}
+
+.box_detalle {
+    /*background: blue;*/
+    height: 200px;
+    width: 100%;
+}
+
+.scroll_detalle {
+    /*background: orange;*/
+    height: 130px;
+    overflow-y: scroll;
+    overflow-x: no-display !important;
+    width: 100%;
+    display: inline-block;
+    float: left;
+    /*padding-left: 30px;
+    padding-right: 30px;*/
+
+}
+
+.lista_detalle {
+    /*background: green;*/
+    width: 100%;
+    text-align: left;
+    margin-top: -20px;
+}
+
+.txt_muestra {
+    display: inline-block;
+    width: 293px;
+    text-align: left;
+    /*background: pink;*/
+    float:left;
+    
+}
+
+.labels{
+    width:100px;
+    height:50px;
+    display:inline-block;
+    vertical-align:top;
+    margin-left:14px;
+}
+
+.opc_equipo {
+    /*background: red;*/
+    float: right;
+    width: 100%;
+}
+
+.btnCerrar, .box_equipo {
+    vertical-align: bottom;
+    display:inline-block;
+}
+
+.box_equipo {
+    width: 200px;
+    /*background: blue;*/
+    overflow-y: auto;
+    display: inline-block;
+    height: 150px;
+    float: left;
+    margin-top: 20px;
+    text-align: left;
+}
+.main_equipo,.main_detalle {
+    height:200px;
+    width:400px;
+    /*background:orange;*/
+    display:inline-block;
+    vertical-align:top;
+    margin-left:10px;
+}
+
+.hide_evidence {
+    display: none;
+}

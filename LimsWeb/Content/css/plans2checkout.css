@@ -1,0 +1,133 @@
+﻿body {
+    font-family: sans-serif;
+}
+
+.pricing_table_wdg {
+    border: 1px solid #408C9;
+    border-radius: 4px;
+    -moz-border-radius: 4px;
+    -webkit-border-radius: 4px;
+    float: left;
+    margin-top: 25px;
+}
+
+    .pricing_table_wdg ul {
+        list-style: none;
+        float: left;
+        width: 147px;
+        margin: 0;
+        border: 1px solid #f2f3f3;
+        padding: 5px;
+        text-align: center;
+        background-color: #FFF;
+                    transition: 0.3s all;
+    }
+
+        .pricing_table_wdg ul:hover {
+            color:white;
+           
+            -webkit-transform: scale(1.1);
+            -moz-transform: scale(1.1);
+            -o-transform: scale(1.1);
+            -moz-box-shadow: 3px 5px 7px rgba(0,0,0,.7);
+            -webkit-box-shadow: 3px 5px 7px rgba(0,0,0,.7);
+            box-shadow: 3px 5px 7px rgba(0,0,0,.7);
+            /*cursor:pointer;*/
+            background: #1A867F;
+            transition: 0.3s all;
+        }
+
+        .pricing_table_wdg ul li {
+            border-bottom: 1px dashed #cfd2d2;
+            padding: 10px 0;
+        }
+
+            .pricing_table_wdg ul li:first-child {
+                font-weight: bold;
+                color: #FFFFFF;
+                font-size: 18px;
+                font-weight: bold;
+                background:#408BC9;
+                border-bottom:none;
+            }
+
+       
+
+            .pricing_table_wdg ul li:nth-child(2) {
+                background: #fbfbfb;
+                font-weight: bold;
+            }
+
+            .pricing_table_wdg ul li:nth-child(3) {
+                font-size: 12px;
+            }
+
+            .pricing_table_wdg ul li:nth-child(n+4) {
+                font-size: 14px;
+            }
+
+            .pricing_table_wdg ul li:last-child a {
+                color: #F0F0F0;
+                text-decoration: none;
+                display: block;
+                border-radius: 1px;
+                -moz-border-radius: 1px;
+                -webkit-border-radius: 1px;
+                border: 2px solid #F0F0F0;
+                padding: 10px;
+                margin: 5px 0;
+                background: #02A902; /* Old browsers */
+                background: -moz-linear-gradient(top, #02A902 0%, #02A902 100%); /* FF3.6+ */
+                background: -webkit-gradient(linear, left top, left bottombottom, color-stop(0%,#02A902), color-stop(100%,#02A902)); /* Chrome,Safari4+ */
+                background: -webkit-linear-gradient(top, #02A902 0%,#02A902 100%); /* Chrome10+,Safari5.1+ */
+                background: -o-linear-gradient(top, #02A902 0%,#02A902 100%); /* Opera11.10+ */
+                background: -ms-linear-gradient(top, #02A902 0%,#02A902 100%); /* IE10+ */
+                filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#02A902', endColorstr='#02A902',GradientType=0 ); /* IE6-9 */
+                background: linear-gradient(top, #02A902 0%,#02A902 100%); /* W3C */
+            }
+
+                .pricing_table_wdg ul li:last-child a:hover {
+                    border: 2px solid #02A902;
+                    background: #058705; /* Old browsers */
+                    transition: 0.5s all;
+                    background: -moz-linear-gradient(top, #02A902 0%, #02A902 100%); /* FF3.6+ */
+                    background: -webkit-gradient(linear, left top, left bottombottom, color-stop(0%,#02A902), color-stop(100%,#02A902)); /* Chrome,Safari4+ */
+                    background: -webkit-linear-gradient(top, #02A902 0%,#02A902 100%); /* Chrome10+,Safari5.1+ */
+                    background: -o-linear-gradient(top, #02A902 0%,#02A902 100%); /* Opera11.10+ */
+                    background: -ms-linear-gradient(top, #02A902 0%,#02A902 100%); /* IE10+ */
+                    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#02A902', endColorstr='#02A902',GradientType=0 ); /* IE6-9 */
+                    background: linear-gradient(top, #02A902 0%,#02A902 100%); /* W3C */
+                }
+/*Custom*/
+
+._price {
+    color:#B3783A;
+}
+
+#form_plans {
+    padding: 20px;
+    background: #E9E9E9;
+    margin: 0 auto;
+}
+
+#main_plans {
+    width: 950px !important; /*Ventana8*/
+}
+
+html {
+    background: #E9E9E9 !important;
+}
+
+.tituloInfo {
+    border-bottom: 1px solid gray;
+    padding: 10px 0px;
+    text-align: left;
+    padding-left: 20px;
+    font-weight: bold;
+    opacity: 0.7;
+}
+
+.pricing_table_wdg {
+    margin: 0 auto;
+    text-align: center;
+}

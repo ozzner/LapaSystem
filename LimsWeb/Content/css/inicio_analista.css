@@ -1,0 +1,328 @@
+﻿
+.cuadroProcesos {
+    background: none;
+    width: 46.5%;
+    margin-left: 2%;
+    height: 290px;
+    display: inline-block;
+    border: 1px solid #eee;
+    border-radius: 4px;
+    box-shadow: 2px 2px 5px 2px rgba(188,188,188,0.6);
+}
+
+.contProcesos {
+    background: none;
+    width: 900px;
+    float: none;
+    display: inline-block;
+    margin: 10px;
+    text-align: center;
+}
+
+
+.hide_evidence {
+       visibility: hidden !important;
+}
+
+* {
+    font-family: Tebuchet MS !important;
+}
+
+.gvGeneral {
+    margin: 0;
+}
+
+.gvCabecera {
+    font-weight: lighter;
+    color: white;
+    text-align: center;
+    background: #428bca;
+}
+
+.gvFilas {
+    text-align: center;
+}
+
+.grilla {
+    width: 100%;
+    margin: 0 auto;
+}
+
+.tab {
+    width: 95%;
+    margin: 0 auto;
+}
+
+.grupoBotones {
+    margin-top: 20px;
+    margin-left: 20px;
+}
+
+.rowss {
+    border-bottom: solid 1px gray;
+    background: orange;
+}
+
+#btnTerminar {
+   /*margin-top:40px;*/
+}
+
+
+
+* {
+    font-family: Calibri;
+}
+
+.gvGeneral {
+    margin: 0;
+}
+
+.gvCabecera {
+    font-weight: lighter;
+    color: white;
+    height: 30px;
+    text-align: center;
+    background: #428bca;
+}
+
+.gvFilas {
+    text-align: center;
+}
+
+
+.grilla {
+    width: 100%;
+    margin: 0 auto;
+}
+
+.tab {
+    width: 95%;
+    margin: 0 auto;
+}
+
+.grupoBotones {
+    margin-top: 20px;
+    margin-left: 20px;
+}
+
+/********************** MY STYLES NULLPOINT.PE **********************/
+.btnActualizar {
+    width: 94%;
+    padding: 4px 50px;
+    background: #3399ff;
+    margin: 10px;
+    float: left;
+    border: solid 2px #fff;
+    font-size: 14px;
+    color: #fff;
+    border-radius: 3px;
+    font-family: Calibri;
+    cursor: pointer;
+}
+
+.tituloProcesos {
+    border-bottom: 1px solid gray;
+    padding: 10px 0px;
+    text-align: left;
+    padding-left: 20px;
+    font-weight: bold;
+    opacity: 0.5;
+    font-family: 'Trebuchet MS';
+    background: #ccc;
+}
+
+.opc_atributo {
+    background: #ccc;
+    display: inline-block;
+    vertical-align: top;
+    width: 50%;
+    height: 100% !important;
+    font-size: 12px;
+    font-family: 'Trebuchet MS';
+    float: left;
+    text-align: center;
+    font-family: 'Trebuchet MS';
+    /*background:blue;*/
+}
+
+.lbl_atributo {
+    font-family: 'Trebuchet MS';
+    text-align: center;
+    font-size: 14px;
+    color: gray;
+}
+
+
+.opc_detalle {
+    background: #ccc;
+    float: left;
+    width: 100%;
+    font-family: 'Trebuchet MS';
+    margin-bottom: 10px;
+    font-size: 14px;
+    color: gray;
+}
+
+
+.box_detalle {
+    /*background: blue;*/
+    height: 190px;
+    width: 100%;
+}
+
+.scroll_detalle {
+    /*background: yellow;*/
+    height: 110px;
+    width: 100%;
+    overflow-y: auto;
+    overflow-x: no-display !important;
+    display: inline-block;
+    float: left;
+    text-align: center;
+    padding: 4px;
+}
+
+    .scroll_detalle .textbox {
+        /*background:orange;*/
+        float: right;
+        width: 150px !important;
+        margin-right: 23px;
+    }
+
+.lista_detalle {
+    /*background: green;*/
+    width: 100%;
+    text-align: left;
+    margin-top: -20px;
+}
+
+.radioButton_style {
+    color: #428bca;
+    font-family: 'Trebuchet MS';
+    margin-left: 8px;
+    font-size: 11px;
+    font-weight: normal;
+}
+
+.txt_muestra {
+    display: inline-block;
+    width: 293px;
+    text-align: left;
+    /*background: pink;*/
+    float: left;
+    height: 55px;
+}
+
+.lbl_parametros {
+    height: 3px;
+    /*background:yellow;*/
+}
+
+.scroll_label {
+    /*background:blue;*/
+    width: 300px;
+    height: 25px;
+}
+
+.labels {
+    width: 100px;
+    height: 50px;
+    display: inline-block;
+    vertical-align: top;
+    margin-left: 14px;
+}
+
+.lbl_titulo {
+    float: left;
+    margin-left: 10px;
+}
+
+.labels .textbox:hover {
+    cursor: no-drop;
+}
+
+.textbox {
+    border: solid 1px #b9b9b9;
+    border-radius: 2px;
+    box-shadow: 1px 1px 1px #888;
+    padding-left: 10px;
+}
+
+.opc_equipo {
+    /*background: red;*/
+    float: right;
+    width: 100%;
+}
+
+/*.btnCerrar, .box_equipo {
+        vertical-align: bottom;
+        display: inline-block;
+    }*/
+
+.box_equipo {
+    width: 200px;
+    /*background: blue;*/
+    overflow-y: auto;
+    display: inline-block;
+    height: 140px;
+    float: left;
+    text-align: left;
+}
+
+
+.main_equipo, .main_detalle {
+    height: 200px;
+    width: 400px;
+    /*background: orange;*/
+    display: inline-block;
+    vertical-align: top;
+    margin-left: 10px;
+    margin-top: 5px;
+    border-radius: 4px;
+    box-shadow: 2px 2px 4px #ccc;
+    padding: 5px;
+}
+
+.content_timer {
+    background: #ccc;
+    /*background:red;*/
+    height: 20px;
+    font-size: 12px;
+    font-family: 'Trebuchet MS';
+}
+
+.timer_number {
+    margin-top:20px;
+    font-size: 24px;
+    font-family: 'Trebuchet MS' !important;
+    color: red;
+}
+
+.tiempo_restante {
+    color: gray;
+    font-size: 14px;
+    font-family: 'Trebuchet MS';
+}
+
+ #MyTimer {
+    background: blue;
+    font-family: 'Trebuchet MS';
+    text-align:center;
+    width:190px;
+    height:0px;
+    float:right;
+    margin-bottom:30px;
+}
+
+ .btnUpdate {
+    height: 25px;
+    width: 110px;
+    background: #3399ff;
+    font-size: 13px;
+    color: #fff;
+    border: solid 2px #fff;
+    border-radius: 3px;
+    font-family: Calibri;
+    cursor: pointer;
+}
+

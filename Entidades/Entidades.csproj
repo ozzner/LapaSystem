@@ -1,0 +1,83 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{8AED2196-D3AE-4152-82FD-D8EF55036413}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Entidades</RootNamespace>
+    <AssemblyName>Entidades</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="ENT_Error.cs" />
+    <Compile Include="ENT_PagosTwocheckout.cs" />
+    <Compile Include="ENT_Rubro.cs" />
+    <Compile Include="ENT_ProductoParametro.cs" />
+    <Compile Include="ENT_ProductoLaboratorio.cs" />
+    <Compile Include="ENT_ProductoAtributo.cs" />
+    <Compile Include="ENT_Producto.cs" />
+    <Compile Include="ENT_PerfilUsuario.cs" />
+    <Compile Include="ENT_ParametroEquipo.cs" />
+    <Compile Include="ENT_Parametro.cs" />
+    <Compile Include="ENT_Pais.cs" />
+    <Compile Include="ENT_MuestraDetalle.cs" />
+    <Compile Include="ENT_Muestra.cs" />
+    <Compile Include="ENT_Mantenimiento.cs" />
+    <Compile Include="ENT_Licencia.cs" />
+    <Compile Include="ENT_Laboratorio.cs" />
+    <Compile Include="ENT_Formula.cs" />
+    <Compile Include="ENT_FacturaDetalle.cs" />
+    <Compile Include="ENT_Factura.cs" />
+    <Compile Include="ENT_Equipos.cs" />
+    <Compile Include="ENT_DetalleMuestraEquipos.cs" />
+    <Compile Include="ENT_Cliente.cs" />
+    <Compile Include="ENT_Ciudad.cs" />
+    <Compile Include="ENT_Calibracion.cs" />
+    <Compile Include="ENT_Atributo.cs" />
+    <Compile Include="ENT_UsuarioLaboratorio.cs" />
+    <Compile Include="ENT_Usuario.cs" />
+    <Compile Include="ENT_UnidadMedida.cs" />
+    <Compile Include="ENT_TipoParametro.cs" />
+    <Compile Include="ENT_RegistroTemporal.cs" />
+    <Compile Include="ENT_Empresa.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

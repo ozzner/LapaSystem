@@ -1,0 +1,87 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="Analista.master.cs" Inherits="LimsWeb.MasterPages.Analista" %>
+
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+    <script src="../Content/js/Reloj.js"></script>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <script src="../Content/js/jquery-1.8.2.js"></script>
+    <script src="../Content/js/bootstrap.min.js"></script>
+    <link href="../Content/css/mpage_analista.css" rel="stylesheet" />
+    <link href="../Content/css/bootstrap.css" rel="stylesheet" />
+    <link href="../Content/css/main_fonts.css" rel="stylesheet" />
+
+    <title>L.A.P.A.  Analista</title>
+    <asp:ContentPlaceHolder ID="head" runat="server">
+    </asp:ContentPlaceHolder>
+    <style type="text/css">
+        .btn {
+        }
+
+        #logo {
+            display: inline-block;
+            width: 410px;
+            height: 50px;
+            float: left;
+            text-align: center;
+            background: #ddd;
+            background-repeat: no-repeat;
+            background-size: 80%;
+            background-position-x: 20px;
+            background-position-y: 7px;
+            border-right: solid 4px #ddd;
+        }
+
+        .imagen_logo {
+            width: 250px;
+            height: 50px;
+        }
+    </style>
+
+</head>
+<body style="background: #ddd">
+    <form id="form1" runat="server">
+
+        <header>
+            <script language="JavaScript" type="text/javascript">
+                iniciarReloj()
+            </script>
+
+
+            <nav class="navega">
+                <%--   <ul class="mymenu">
+                    <li><a class="active" href="#">Producto</a></li>
+                    <li><a href="#">Parámetro</a></li>
+                    <li><a href="#">&nbsp;&nbsp;&nbsp;Usuario&nbsp;&nbsp;&nbsp;</a></li>
+                    <li><a href="#">&nbsp;&nbsp;Atributo&nbsp;&nbsp;</a></li>
+                    <li><a href="#">&nbsp;&nbsp;Reporte&nbsp;&nbsp;</a></li>
+                </ul>--%>
+            </nav>
+
+            <div id="logo">
+                <img class="imagen_logo" src="../Content/img/lapa.png" /></div>
+            <asp:Label runat="server" ID="lblFecha" Style="background: none; margin-left: 200px; font-family: Consolas; margin-top: 15px" BackColor="Transparent" ForeColor="white" Width="140" Height="30" Font-Size="Medium" Font-Bold="false"></asp:Label>
+
+            <asp:Label ID="clock" Style="margin-left: 10px; font-family: Consolas; margin-top: 15px" BackColor="Transparent" ForeColor="white" Width="140" Height="30" Font-Size="Medium" Font-Bold="false" runat="server" />
+
+            <div id="datos">
+                <div class="labelA">
+                    <asp:Label class="bienvenida" runat="server" ID="lblBienvenida">Bienvenid@,</asp:Label>
+                </div>
+                <div class="labelB">
+                    <asp:Label class="nombres" runat="server" ID="lblNombreCompleto">Renzo David Santillán Chavez</asp:Label>
+                </div>
+                <asp:Button runat="server" id="btnCerrar" CssClass="btnCerrar" Text="Cerrar Sesión" OnClick="btnCerrar_Click"> </asp:Button>
+            </div>
+
+
+        </header>
+
+        <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+        </asp:ContentPlaceHolder>
+
+
+    </form>
+</body>
+</html>

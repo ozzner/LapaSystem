@@ -1,0 +1,138 @@
+﻿
+        * {
+        font-family:Calibri;
+        font-size:14px;
+   background:#d9d9d9;
+        }
+
+.color {
+            background: rgb(247, 247, 247);
+
+}
+
+.fielset {
+    background: rgb(247, 247, 247);
+    border-radius:6px;
+    border: 1px solid gray;
+    width:360px;
+    padding:20px;
+    display:inline-block;
+}
+
+
+
+.registro , 
+.validacion, 
+.ContenedorRegistro {
+    
+    margin:20px auto;
+    top: 0px;
+    width: 350px;
+    padding: 18px 55px 18px 35px;
+       
+    border: 1px solid rgba(147, 184, 189,0.8);
+    -webkit-box-shadow: 0pt 2px 5px rgba(105, 108, 109, 0.7),	0px 0px 8px 5px rgba(208, 223, 226, 0.4) inset;
+    -moz-box-shadow: 0pt 2px 5px rgba(105, 108, 109, 0.7),	0px 0px 8px 5px rgba(208, 223, 226, 0.4) inset;
+    box-shadow: 0pt 2px 5px rgba(105, 108, 109, 0.7),	0px 0px 8px 5px rgba(208, 223, 226, 0.4) inset;
+    -webkit-box-shadow: 5px;
+    -moz-border-radius: 5px;
+    border-radius: 5px;
+
+    height:575px;   
+        
+}
+
+.ContenedorRegistro {
+    width:830px;
+    
+}
+
+
+    .registro h1 , 
+    .validacion h1,
+    .ContenedorRegistro h1{
+            
+    font-size:25px;
+    background: rgb(247, 247, 247);
+        
+    }
+
+.txts {
+    width: 100%;
+    margin-top: 4px;
+    padding: 10px 5px 10px 20px;
+    border: 1px solid rgb(178, 178, 178);
+    -webkit-appearance: textfield;
+    -webkit-box-sizing: content-box;
+    -moz-box-sizing: content-box;
+    box-sizing: content-box;
+    -webkit-border-radius: 3px;
+    -moz-border-radius: 3px;
+    border-radius: 3px;
+    -webkit-box-shadow: 0px 1px 4px 0px rgba(168, 168, 168, 0.6) inset;
+    -moz-box-shadow: 0px 1px 4px 0px rgba(168, 168, 168, 0.6) inset;
+    box-shadow: 0px 1px 4px 0px rgba(168, 168, 168, 0.6) inset;
+    -webkit-transition: all 0.2s linear;
+    -moz-transition: all 0.2s linear;
+    -o-transition: all 0.2s linear;
+    transition: all 0.2s linear;
+    background:white;
+}
+.btns{
+    background:#428bca;
+    cursor:pointer;
+    display:inline-block;
+    border-radius:3px;
+    cursor:pointer;
+    transition: opacity 1s;    
+    margin-top:10px;
+    font-weight:bold;
+    padding:4px 20px;
+    color:White;
+    border:0.5px solid black;  
+    width:108%;
+    padding: 10px 5px 10px 20px;
+}
+
+    .btns:hover {
+    opacity:0.7;
+    }
+
+.linea {
+width:100%;
+height:1px;
+background:gray;
+        
+}
+
+#tabla, #tabla tr, #tabla tr td {
+background: rgb(247, 247, 247);
+}
+
+.etqs {
+    width:120px;
+    display:inline-block;
+    margin-left:10px;
+
+}
+
+.tamanoNormal {
+    width:190px;
+    padding:5px;
+}
+
+.soloLectura {
+    background:#d9d9d9;
+    color:gray;
+}
+
+#InformacionTerminos,
+#InformacionTerminos a
+ {
+    padding-top:30px;
+width:405px;
+text-align:justify;
+font-size:13px;
+background: rgb(247, 247, 247);
+
+}

@@ -1,0 +1,24 @@
+﻿
+
+.popupTxts {
+    margin-bottom:2px;
+}
+
+
+.gvCabecera {
+            
+            font-weight:bolder;
+            color:GRAY;
+            text-align:center;
+            height:40px;
+            font-size:16px;
+        }
+
+.gvGeneral {
+            margin:0;           
+        }
+
+
+.gvFilas {
+    text-align:center;
+    }   

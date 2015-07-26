@@ -1,0 +1,1339 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>L.A.P.A. SYSTEM</title>
+    <meta name="viewport" content="width=device-width, user-scalable=no">
+    <meta name="description" content="Twitter Bootstrap Parallax Tutorial with HTML5 / CSS3 / JavaScript">
+    <meta name="author" content="Untame.net">
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/css/bootstrap.min.css">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/css/bootstrap-theme.min.css">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/js/bootstrap.min.js"></script>
+
+<script>
+  
+  $('a').click(function() {
+    var elementClicked = $(this).attr("href");
+    var destination = $(elementClicked).offset(500).top;
+    $("html:not(:animated),body:not(:animated)").animate({ marginTop: '200px', opacity: 0.5 }, 1000);
+
+});
+
+  
+  function changeHeight() {
+
+document.getElementById('Caracteristicas').style.height = "600px"
+
+}
+
+  
+  function changeHeight() {
+
+document.getElementById('Caracteristicas').style.margin-top = "600px"
+
+}
+
+  
+</script>
+
+<script type="text/javascript">
+
+window.addEventListener("scroll", function() {
+    if (window.scrollY > 500) {
+         $('.navbar').css("height","80px");
+       $('.navbar').css("padding-top","10px");
+
+    }
+
+    if (window.scrollY < 100) {
+     
+
+        $('.navbar').css("height","10px");
+        $('.navbar').css("padding-top","0px");
+    }
+    
+},false);
+
+</script>
+
+<style>
+* {
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  color: #000;
+}
+
+
+@media screen and (max-width: 700px) {
+    .navbar-inverse .navbar-collapse, .navbar-inverse .navbar-form {
+background-color: black;
+position: relative;
+display: block;
+opacity: 0.8;
+width: 115%;
+margin-left: -15px;
+}
+}
+
+
+
+
+html, body {
+  height:100%;
+}
+
+
+body {
+  margin:0;
+ 
+  font-size:1.3em;
+  color:#333;
+  font-family:'Open Sans', sans-serif;
+}
+
+section {
+  float:left;
+  width:100%;
+  background:#fff;
+  position:relative;
+  /*box-shadow:0 0 5px 0px #333;*/
+}
+
+
+/* the important styles */
+
+.arrow-wrap {
+  position:absolute;
+  z-index:1;
+  left:50%;
+  top:-5em;
+  margin-left:-5em;
+  background:#111;
+  width:10em;
+  height:10em;
+  padding:4em 2em;
+  border-radius:50%;
+  font-size:0.5em;
+  display:block;
+  box-shadow:0px 0px 5px 0px #333;
+}
+
+.arrow {
+  float:left;
+  position:relative;
+  width: 0px;
+height: 0px;
+border-style: solid;
+border-width: 3em 3em 0 3em;
+border-color: #ffffff transparent transparent transparent;
+  -webkit-transform:rotate(360deg)
+}
+
+.arrow:after {
+  content:'';
+  position:absolute;
+  top:-3.2em;
+  left:-3em;
+  width: 0px;
+height: 0px;
+border-style: solid;
+border-width: 3em 3em 0 3em;
+border-color: #111 transparent transparent transparent;
+  -webkit-transform:rotate(360deg)
+}
+
+
+.hint {
+  position:absolute;
+  top:0.6em;
+  width:100%;
+  left:0;
+  font-size:2em;
+  font-style:italic;
+  text-align:center;
+  color:#fff;
+  opacity:0;
+}
+
+
+.arrow-wrap:hover .hint {
+  opacity:1;
+}
+
+
+  @-webkit-keyframes arrows {
+    0% { top:0; }
+    10% { top:12%; }
+    20% { top:0; }
+    30% { top:12%; }
+    40% { top:-12%; }
+    50% { top:12%; }
+    60% { top:0; }
+    70% { top:12%; }
+    80% { top:-12%; }
+    90% { top:12%; }
+    100% { top:0; }
+  }
+  
+  .arrow-wrap .arrow {
+    -webkit-animation: arrows 2.8s 0.4s;
+    -webkit-animation-delay: 3s;
+  }
+
+
+
+
+
+/*  this is the unimportant CSS used just to layout the content  */
+
+
+
+header {
+  float:left;
+  width:100%;
+  padding:2em 4em;
+  color:#fff;
+  height:calc(100% - 3em);
+}
+
+header h1 {
+  margin:0;
+}
+header h3 {
+  margin:0;
+  color: #56dcee ;
+}
+
+header a {
+  color:#56dcee;
+  opacity:0.5;
+  text-decoration:none;
+}
+
+header a:hover {
+  color:#333;
+  opacity:1;
+}
+
+
+.content {
+  float:left;
+  width:70%;
+  margin:0 15%;
+  padding:2em 0;
+}
+
+h1 {
+  font-family:'Maven Pro', sans-serif;
+  font-weight:300;
+  font-size:2.4em;
+}
+
+h2, h3 {
+  font-family:'Maven Pro', sans-serif;
+  font-weight:300;
+  font-size:1.5em;
+  margin-top:2em;
+}
+
+pre {
+  background:#ededed;
+  padding:1em;
+}
+
+p {
+  color:#555;
+  font-size:0.9em;
+}
+
+p a {
+  color:#14b5d1;
+  text-decoration:none;
+}
+
+
+
+</style>
+
+
+<script>
+  //this is where we apply opacity to the arrow
+$(window).scroll( function(){
+
+  //get scroll position
+  var topWindow = $(window).scrollTop();
+  //multipl by 1.5 so the arrow will become transparent half-way up the page
+  var topWindow = topWindow * 1.5;
+  
+  //get height of window
+  var windowHeight = $(window).height();
+      
+  //set position as percentage of how far the user has scrolled 
+  var position = topWindow / windowHeight;
+  //invert the percentage
+  position = 1.5 - position;
+
+  //define arrow opacity as based on how far up the page the user has scrolled
+  //no scrolling = 1, half-way up the page = 0
+  $('.arrow-wrap').css('opacity', position);
+
+});
+
+
+
+
+
+
+//Code stolen from css-tricks for smooth scrolling:
+
+$(document).ready(function() {
+
+  function filterPath(string) {
+  return string
+    .replace(/^\//,'')
+    .replace(/(index|default).[a-zA-Z]{3,4}$/,'')
+    .replace(/\/$/,'');
+  }
+  var locationPath = filterPath(location.pathname);
+  var scrollElem = scrollableElement('html', 'body');
+ 
+  $('a[href*=#]').each(function() {
+    var thisPath = filterPath(this.pathname) || locationPath;
+    if (  locationPath == thisPath
+    && (location.hostname == this.hostname || !this.hostname)
+    && this.hash.replace(/#/,'') ) {
+      var $target = $(this.hash), target = this.hash;
+      if (target) {
+        var targetOffset = $target.offset().top;
+        $(this).click(function(event) {
+          event.preventDefault();
+          $(scrollElem).animate({scrollTop: targetOffset}, 1000, function() {
+            location.hash = target;
+          });
+        });
+      }
+    }
+  });
+ 
+  // use the first element that is "scrollable"
+  function scrollableElement(els) {
+    for (var i = 0, argLength = arguments.length; i <argLength; i++) {
+      var el = arguments[i],
+          $scrollElement = $(el);
+      if ($scrollElement.scrollTop()> 0) {
+        return el;
+      } else {
+        $scrollElement.scrollTop(1);
+        var isScrollable = $scrollElement.scrollTop()> 0;
+        $scrollElement.scrollTop(0);
+        if (isScrollable) {
+          return el;
+        }
+      }
+    }
+    return [];
+  }
+
+});
+</script>
+
+    <style type="text/css">
+        #intro { 
+            background: url(./images/Lapa3.jpg) 50% 0 fixed; 
+            height: auto;  
+            margin: 0 auto; 
+            width: 100%; 
+            position: relative; 
+            box-shadow: 0 0 50px rgba(0,0,0,0.8);
+           /* padding: 100px 0;*/
+           padding-top: -100px;
+        }
+        #home { 
+            background: url(./images/Lapa.jpg) 50% 0 fixed; 
+             background-size: 100% 100%;
+    background-repeat: no-repeat;
+            height: auto;  
+            margin: 0 auto; 
+            width: 100%; 
+            position: relative; 
+            /*box-shadow: 0 0 50px rgba(0,0,0,0.8);*/
+            padding: 200px 0;
+        }
+
+          #section3 { 
+            background: url(./images/Lapa.jpg) 50% 0 fixed; 
+             background-size: 100% 100%;
+    background-repeat: no-repeat;
+
+           height: 80%;  
+            margin: 0 auto; 
+            width: 100%; 
+            position: relative; 
+            /*box-shadow: 0 0 50px rgba(0,0,0,0.8);*/
+            padding: 200px 0;
+            background-repeat: no-repeat;
+
+        } 
+
+        #section4 { 
+            background: url(./images/Lapa1.jpg) 50% 0 fixed; 
+             background-size: 100% 100%;
+    background-repeat: no-repeat;
+
+           height: 80%;  
+            margin: 0 auto; 
+            width: 100%; 
+            position: relative; 
+            /*box-shadow: 0 0 50px rgba(0,0,0,0.8);*/
+            padding: 200px 0;
+            background-repeat: no-repeat;
+
+        }
+
+
+        #section5 { 
+            background: url(./images/Lapa2.jpg) 50% 0 fixed; 
+             background-size: 100% 100%;
+    background-repeat: no-repeat;
+            height: 80%;  
+            margin: 0 auto; 
+            width: 100%; 
+            position: relative; 
+            /*box-shadow: 0 0 50px rgba(0,0,0,0.8);*/
+            padding: 200px 0;
+            background-repeat: no-repeat;
+        }
+
+
+        #section6 { 
+            background: url(./images/Lapa4.jpg) 50% 0 fixed; 
+             background-size: 100% 100%;
+    background-repeat: no-repeat;
+            height: 80%;  
+            margin: 0 auto; 
+            width: 100%; 
+            position: relative; 
+            /*box-shadow: 0 0 50px rgba(0,0,0,0.8);*/
+            padding: 200px 0;
+            background-repeat: no-repeat;
+        }
+        #about { 
+            /*background: url(./images/about1.fw.png) 50% 0 fixed;*/
+            background-color: #fff; 
+            height: 100%;
+            margin: 0 auto; 
+            width: 100%; 
+            position: relative; 
+            /*box-shadow: 0 0 50px rgba(0,0,0,0.8);*/ 
+            /*padding: 100px 0;*/
+/*margin-top: 100px;*/
+            padding-top: 50px;
+            padding-bottom: 50px;
+            
+            color: #fff;
+        }
+  
+
+            #Caracteristicas { 
+           
+            /*background: url(./images/about1.fw.png) 50% 0 fixed;*/
+            background-color: #fff; 
+            height: auto;
+            word-wrap: break-word;
+            overflow: hidden;
+            display: block;
+            margin: 0 auto; 
+            width: 100%; 
+            position: relative; 
+            /*box-shadow: 0 0 50px rgba(0,0,0,0.8);*/ 
+            /*padding: 100px 0;*/
+/*margin-top: 100px;*/
+            padding-top: 50px;
+            padding-bottom: 50px;
+
+
+            color: #fff;
+        }
+        
+           #about2 { 
+           
+            /*background: url(./images/about1.fw.png) 50% 0 fixed;*/
+            background-color: #fff; 
+            height: 100%;
+            margin: 0 auto; 
+            width: 100%; 
+            position: relative; 
+            /*box-shadow: 0 0 50px rgba(0,0,0,0.8);*/ 
+            /*padding: 100px 0;*/
+/*margin-top: 100px;*/
+            padding-top: 50px;
+            padding-bottom: 50px;
+            word-wrap: break-word;
+            overflow: hidden;
+
+            color: #fff;
+        }
+        
+
+
+           #Contactanos { 
+           
+            /*background: url(./images/about1.fw.png) 50% 0 fixed;*/
+            background-color: #fff; 
+            height: 100%;
+            margin: 0 auto; 
+            width: 100%; 
+            position: relative; 
+            word-wrap: break-word;
+            overflow: hidden;
+            /*box-shadow: 0 0 50px rgba(0,0,0,0.8);*/ 
+            /*padding: 100px 0;*/
+/*margin-top: 100px;*/
+            padding-top: 50px;
+            padding-bottom: 50px;
+
+            color: #fff;
+        }
+        
+
+
+           #Ayuda { 
+           
+            /*background: url(./images/about1.fw.png) 50% 0 fixed;*/
+            background-color: #fff; 
+            height: 100%;
+            margin: 0 auto; 
+            width: 100%; 
+            position: relative; 
+            /*box-shadow: 0 0 50px rgba(0,0,0,0.8);*/ 
+            /*padding: 100px 0;*/
+/*margin-top: 100px;*/
+            padding-top: 50px;
+            padding-bottom: 50px;
+            word-wrap: break-word;
+            overflow: hidden;
+
+            color: #fff;
+        }
+        
+
+
+           #about3 { 
+            /*background: url(./images/about.png) 50% 0 fixed;*/
+            background-color: #1A867F; 
+            height: 80%;
+            margin: 0 auto; 
+            width: 100%; 
+            position: relative; 
+            box-shadow: 0 0 50px rgba(0,0,0,0.8);
+            padding: 100px 0;
+
+            color: #fff;
+        }
+
+
+         #Inicio { 
+            background: url(./images/Lapa2.jpg) 50% 0 fixed; 
+            background-size: 100% 100%;
+    background-repeat: no-repeat;
+            height: 96%;
+            margin: 0 auto; 
+            width: 100%; 
+            position: relative; 
+            /*box-shadow: 0 0 50px rgba(0,0,0,0.8);*/
+            padding: 100px 0;
+            color: #fff;
+        }
+
+        /* Non-essential demo stuff */
+        .hero-unit {
+            background-color: #fff;
+            box-shadow: 0 0 20px rgba(0,0,0,0.1);
+        }
+        .media-object { width: 64px; height: 64px; padding-bottom: 30px }
+
+
+
+.navbar-nav  li a{
+color:white!important;
+  /* First we need to help some browsers along for this to work.
+     Just because a vendor prefix is there, doesn't mean it will
+     work in a browser made by that vendor either, it's just for
+     future-proofing purposes I guess. */
+  -o-transition:.5s;
+  -ms-transition:.5s;
+  -moz-transition:.5s;
+  -webkit-transition:.5s;
+  /* ...and now for the proper property */
+  transition:.5s;
+}
+
+ .navbar-nav  li a:hover{
+  border-bottom:2px solid #408BC9;
+  background-color: #B3783A!important;
+}
+
+
+
+
+   
+
+
+/*scrollup*/
+
+  .scrollToTop{
+    width:100px; 
+    height:130px;
+    padding:10px; 
+    text-align:center; 
+    background: whiteSmoke;
+    font-weight: bold;
+    color: #444;
+    text-decoration: none;
+    position:fixed;
+    top:75px;
+    right:40px;
+    display:none;
+    background: url('./images/top2.png') no-repeat 0px 20px;
+}
+.scrollToTop:hover{
+    text-decoration:none;
+}
+
+#topcontrol{
+   padding-right:  50px;
+   padding-bottom: 50px;
+}
+
+
+
+
+h1 {
+  color: #B3783A;
+  font-family: 'Open Sans Condensed', sans-serif;
+  font-size: 40px;
+  font-weight: 700;
+  line-height: 64px;
+  margin: 0 0 0;
+        /*padding: 20px 30px;*/
+        text-align: center;
+        text-transform: uppercase;
+}
+
+
+@media only screen and (max-width: 480px) { 
+  
+
+  h1 {
+  color: #B3783A;
+  font-family: 'Open Sans Condensed', sans-serif;
+  font-size: 20px;
+  font-weight: 700;
+  line-height: 64px;
+  margin: 0 0 0;
+        text-align: center;
+        text-transform: uppercase;
+}
+
+}
+
+
+h2 {
+  color: #111;
+  font-family: 'Open Sans Condensed', sans-serif;
+  font-size: 48px;
+  font-weight: 700;
+  line-height: 48px;
+  margin: 0 0 24px;
+        padding: 0 30px;
+        text-align: center;
+        text-transform: uppercase;
+}
+
+p {
+  color: #111;
+  font-family: 'Open Sans', sans-serif;
+  font-size: 16px;
+  line-height: 28px;
+  margin: 0 0 48px;
+}
+
+a {
+  color: #990000;
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+.date {
+        color: #B3783A;
+        display: block;
+        font-family: 'Open Sans', sans-serif;
+        font-size: 16px;
+        position: relative;
+        text-align: center;
+        z-index: 1;
+}
+
+.date:before {
+        border-top: 1px solid #B3783A;
+        content:"";
+        position: absolute;
+        top: 12px;
+        left: 0;  
+        width: 100%;
+        z-index: -1;
+}
+
+.author {
+        color: #666;
+        display: block;
+        font-family: 'Open Sans', sans-serif;
+        font-size: 12px;
+        padding-bottom: 38px;
+        position: relative;
+        text-align: center;
+        z-index: 1;
+}
+
+.author:before {
+        border-top: 1px solid #B3783A;
+        content:"";
+        position: absolute;
+        top: 12px; 
+        left: 0; 
+        width: 100%;
+        z-index: -1;
+}
+
+.date span,
+.author span { 
+        background: #fdfdfd;
+        padding: 0 10px; 
+        /*text-transform: uppercase;*/
+}
+
+.line {
+        border-top: 1px solid #111;
+        display: block;
+        margin-top: 60px;
+        padding-top: 50px;
+        position: relative;    
+}
+
+
+
+
+.input {
+  color:white;
+display: block;
+box-sizing: border-box;
+width: 100%;
+margin: 5px 0px;
+}
+
+.inputAsunto{
+display: inline-block;
+box-sizing: border-box;
+width: 100%;
+float: left;
+
+}
+
+.inputCombo{
+display: inline-block;
+box-sizing: border-box;
+width: 50%;
+float: right;
+margin: 5px 0px;
+
+}
+
+
+
+
+
+.inputAsunto input {
+border: none;
+background-color: #212527;
+box-sizing: border-box;
+padding: 10px 15px;
+display: block;
+width: 50%;
+border-radius: 6px;
+border: 1px solid #181b1c;
+box-shadow: 0 1px 1px rgba(255,255,255,0.1),0 1px 3px rgba(0,0,0,0.2) inset;
+}
+
+
+.input input {
+border: none;
+background-color: #212527;
+box-sizing: border-box;
+padding: 10px 15px;
+display: block;
+width: 100%;
+border-radius: 6px;
+border: 1px solid #181b1c;
+box-shadow: 0 1px 1px rgba(255,255,255,0.1),0 1px 3px rgba(0,0,0,0.2) inset;
+}
+
+input-submit{
+  margin-left: auto;
+  margin-right: auto;
+  width: 100px;
+}
+
+.input textarea {
+border: none;
+background-color: #212527;
+box-sizing: border-box;
+padding: 10px 15px;
+display: block;
+width: 100%;
+border-radius: 6px;
+border: 1px solid #181b1c;
+box-shadow: 0 1px 1px rgba(255,255,255,0.1),0 1px 3px rgba(0,0,0,0.2) inset;
+}
+</style>
+
+
+<script>
+  
+  $("#radiobutt input[type=radio]").each(function(i){
+    $(this).click(function () {
+      if(i==2) { //3rd radiobutton
+        $("#textbox1").attr("disabled", "disabled"); 
+        $("#checkbox1").attr("disabled", "disabled"); 
+      }
+      else {
+        $("#textbox1").removeAttr("disabled"); 
+        $("#checkbox1").removeAttr("disabled"); 
+      }
+      });
+
+  });
+</script>
+
+
+<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
+
+
+</head>
+<body>
+<link href='http://fonts.googleapis.com/css?family=Open+Sans|Maven+Pro:500' rel='stylesheet' type='text/css'>
+
+
+
+
+    
+   <div class="navbar navbar-inverse navbar-default navbar-fixed-top" style="opacity:0.8; height:80px; padding-right:32px; padding-top:15px; font-size:15px; font-weight: bold;">
+    <div class="container">
+        <div class="navbar-header">
+            <button class="navbar-toggle" type="button" data-toggle="collapse" data-target="#navbar-main">
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="#"><img src="./images/logo1.fw.png"></a>
+        </div>
+        <center>
+            <div class="navbar-collapse collapse svg-wrapper" id="navbar-main">
+                <ul class="nav navbar-nav">
+                    <li><a href="#about">¿QUÉ ES LAPA?</a>
+                    </li>
+                    <li><a onClick="changeHeight(); changeMargin();" href="#Caracteristicas">CARACTERÍSTICAS</a>
+                    </li>
+                    <li><a href="#Contactanos">CONTÁCTENOS</a>
+                    </li>
+                    <li><a href="#Ayuda">AYUDA</a>
+                    </li>
+                   
+                    
+                </ul>
+
+                 <ul class="nav navbar-nav navbar-right" style="padding-top:8px;">
+                   <a href="https://lapa-tec.com/iRegistro/Login.aspx" target="blank" class="btn btn-info">Ingresar</a>
+                   <a href="https://lapa-tec.com/Principal.aspx"  target="blank" class="btn btn-primary" role="button">Registrar</a>
+                    
+                </ul>
+
+                
+            </div>
+        </center>
+    </div>
+
+
+
+    </div>
+
+    <div class="modal fade" id="loginModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+                <h4 class="modal-title">Registrar</h4>
+            </div>
+
+            <div class="modal-body">
+                <!-- The form is placed inside the body of modal -->
+                <form id="loginForm" method="post" class="form-horizontal">
+                    <div class="form-group">
+                        <label class="col-xs-3 control-label">Usuario</label>
+                        <div class="col-xs-5">
+                            <input type="text" class="form-control" name="username" />
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label class="col-xs-3 control-label">Contraseña</label>
+                        <div class="col-xs-5">
+                            <input type="password" class="form-control" name="password" />
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <div class="col-xs-5 col-xs-offset-3">
+                            <button type="submit" class="btn btn-default">Guargar</button>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+
+
+
+<section id="Inicio" data-speed="6" data-type="background">
+        <div class="container">
+            <div class="row-fluid"><br><br><br><br>
+                <div class="span4 text-center">
+                    <!--h1>This Twitter Bootstrap.</h1>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+                tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+                quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+                consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+                cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+                proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+                </div-->
+            </div>
+
+             <br>   <br> <br> <br> 
+            <div>
+            
+            </div>
+        </div>
+    </section>
+
+    
+
+
+   
+
+
+
+   
+    <section id="about" data-speed="4" data-type="background" class="main">
+        <a class="arrow-wrap" href="#about">
+<span class="arrow"></span>
+<!--<span class="hint">scroll</span>-->
+</a>
+ <div class="container">
+
+  <br> <br>
+            <div class="row-fluid">
+                <div class="span4 text-center">
+                    
+               
+
+
+<div class="inner">   
+    
+    <a href="" class="close-preview" title="Close fullscreen demo"></a>
+    
+     <div class="container">
+
+       
+               <div class="row-fluid" style="color:white">
+               
+                  <div class="col-xs-12 col-sm-9 col-md-6 col-lg-6">
+                       
+                        <date class="date"></date> <br> <br>
+<h1>¿Qué es L.A.P.A?</h1>
+<author class="author"><span></span></author>
+<p align="justify">L.A.P.A. es un producto de Wasitec SAC, abocada al desarrollo de soluciones informáticas rentables para empresas. <br><br>
+
+El sistema L.A.P.A. lleva el registro de datos enfocado en el control y seguimiento de parámetros o atributos de interés tanto en laboratorio como en producción.</p>
+                                                                
+                  </div>
+
+                   
+                  <div class="hidden-xs col-sm-9 col-md-6 col-lg-6">
+
+             <date class="date"></date> <br> <br>      
+<h1>¿Por qué usar L.A.P.A.?</h1>
+<author class="author"><span></span></author>
+
+<p align="justify">Es la herramienta ideal para profesionales que necesitan manejar información en tiempo real, programar actividades de muestreo y contar con reportes de control para la toma de decisión en el mejoramiento de un producto o en la eficiencia de los recursos utilizados en algún proceso de producción.</p>
+                    
+                  </div>
+            </div>
+        </div>
+    
+   
+
+
+
+
+
+
+
+    </div>
+
+
+
+
+
+
+
+                </div>
+            </div>
+
+             
+            <div>
+            
+            </div>
+        </div>
+        
+
+     
+    </section>
+
+
+
+    <!-- Section #3 -->
+    <section id="section3" data-speed="4" data-type="background">
+        <div class="container">
+            <div class="row-fluid" style="color:white">
+
+
+
+  <!--div
+                <div class="col-xs-12 col-sm-9 col-md-6 col-lg-6">
+                       <div class="span4">
+                    <h2>Heading</h2> <hr>
+                    <div class="media">
+                        <a class="pull-left" href="#">
+                            <img class="media-object" src="images/check.png">
+                        </a>
+                        <div class="media-body">
+                            <h4 class="media-heading">Media heading</h4>
+                            Cras sit amet nibh libero, in gravida nulla. Nulla vel metus scelerisque ante.
+                        </div>
+                    </div>
+                    <div class="media">
+                        <a class="pull-left" href="#">
+                            <img class="media-object" src="images/check.png">
+                        </a>
+                        <div class="media-body">
+                            <h4 class="media-heading">Media heading</h4>
+                            Cras sit amet nibh libero, in gravida nulla. Nulla vel metus scelerisque ante.
+                        </div>
+                    </div>
+                    <div class="media">
+                        <a class="pull-left" href="#">
+                            <img class="media-object" src="images/check.png">
+                        </a>
+                        <div class="media-body">
+                            <h4 class="media-heading">Media heading</h4>
+                            Cras sit amet nibh libero, in gravida nulla. Nulla vel metus scelerisque ante.
+                        </div>
+                    </div>
+                </div>
+                                                                
+                  </div>
+               
+                  <div class="col-xs-12 col-sm-9 col-md-6 col-lg-6">
+                                <div class="span4">
+                  <h2>More Details</h2> <hr>
+                  <p>Donec sed odio dui. Etiam porta sem malesuada magna mollis euismod. Nullam id dolor id nibh ultricies vehicula ut id elit. Morbi leo risus, porta ac consectetur ac, vestibulum at eros. Praesent commodo cursus magna, vel scelerisque cursus nisl consectetur et.</p>
+                  <p>Donec sed odio dui. Etiam porta sem malesuada magna mollis euismod. Nullam id dolor id nibh ultricies vehicula ut id elit. Morbi leo risus, porta ac consectetur ac, vestibulum at eros. Praesent commodo cursus magna, vel scelerisque cursus nisl consectetur et.</p>
+                  <p><a class="btn btn-success">View details &raquo;</a></p>
+                </div> -->
+                                                                
+                  </div>
+
+                    
+            </div>
+        </div>
+    </section>
+
+
+ <section id="Caracteristicas" data-speed="4" data-type="background" class="main">
+        <div class="container">
+
+          <br> <br>
+            <div class="row-fluid">
+                <div class="span4 text-center">
+       
+
+         <date class="date"></date> <br> <br>
+<h1>Características</h1>
+<author class="author"><span></span></author>            
+
+
+
+<p>Al ser una herramienta web, es de fácil acceso mediante cualquier navegador de internet. 
+Es SIMPLE de usar, DINÁMICO en sus tiempos de respuesta e interacción y SEGURO al usar certificados de encriptación en el flujo de información entre el usuario y nuestro servidor.</p>
+
+
+        <section class="centrado"  >
+                <div class="row">
+                   
+                           
+
+                            <div class="col-xs-12 col-sm-12 col-md-4 col-lg-4">
+                                <h3>SIMPLE</h3><hr><p align="justify">El registro de datos como la supervisión del sistema están diseñados pensando en simplificar la colección de información en cualquier puesto de control de calidad en laboratorio o en planta. <BR>
+La interfaz de Supervisión permite visualizar el estado de cada muestreo, visualizar registros históricos, ver tendencias en las variables y hacer seguimiento tanto de operadores / analistas como también llevar el control de equipos utilizados.</p>
+                                                                
+                            </div>
+                       
+                    <div class="col-xs-12 col-sm-12 col-md-4 col-lg-4">
+                      
+                                <h3>DINÁMICO</h3><hr><p align="justify">La facilidad de interacción entre registro es control es inmediata. El Analista sólo tiene que actualizar las tareas pendientes, llevar control de las tareas en proceso y visualizar las tareas terminadas. <br>  
+Mientras que en simultáneo el Supervisor puede llevar control de las actividades de las personas a su cargo; como también visualizar las tendencias en tiempo real, para tomar una decisión en calidad o producción.</p>
+
+                        
+                    </div>
+                    <div class="col-xs-12 col-sm-12 col-md-4 col-lg-4">
+                        
+                                <h3>SEGURO</h3><hr><p align="justify">La arquitectura de L.A.P.A. contempla certificados de encriptación para que su información llegue segura a nuestros servidores y así pueda realizar las consultas que desee en la base de datos. <br>
+El Equipo de Wasitec SAC, mantiene respaldos de seguridad de su información periódicamente. En caso de cualquier incidente pueda restablecer la información histórica. <br>
+Wasitec SAC cuenta con una alianza estratégica con proveedores de hardware de primer nivel, garantizando la disponibilidad de los servidores con los que trabajamos.</p>
+                                
+                        
+                    </div>
+                </div>
+
+            </section>
+
+
+     </div>
+   </div>
+    </section>
+
+
+
+    <!-- Section #4 -->
+    <section id="section4" data-speed="4" data-type="background">
+        <div class="container">
+            <div class="row-fluid" style="color:white">
+
+
+
+  <!--div
+                <div class="col-xs-12 col-sm-9 col-md-6 col-lg-6">
+                       <div class="span4">
+                    <h2>Heading</h2> <hr>
+                    <div class="media">
+                        <a class="pull-left" href="#">
+                            <img class="media-object" src="images/check.png">
+                        </a>
+                        <div class="media-body">
+                            <h4 class="media-heading">Media heading</h4>
+                            Cras sit amet nibh libero, in gravida nulla. Nulla vel metus scelerisque ante.
+                        </div>
+                    </div>
+                    <div class="media">
+                        <a class="pull-left" href="#">
+                            <img class="media-object" src="images/check.png">
+                        </a>
+                        <div class="media-body">
+                            <h4 class="media-heading">Media heading</h4>
+                            Cras sit amet nibh libero, in gravida nulla. Nulla vel metus scelerisque ante.
+                        </div>
+                    </div>
+                    <div class="media">
+                        <a class="pull-left" href="#">
+                            <img class="media-object" src="images/check.png">
+                        </a>
+                        <div class="media-body">
+                            <h4 class="media-heading">Media heading</h4>
+                            Cras sit amet nibh libero, in gravida nulla. Nulla vel metus scelerisque ante.
+                        </div>
+                    </div>
+                </div>
+                                                                
+                  </div>
+               
+                  <div class="col-xs-12 col-sm-9 col-md-6 col-lg-6">
+                                <div class="span4">
+                  <h2>More Details</h2> <hr>
+                  <p>Donec sed odio dui. Etiam porta sem malesuada magna mollis euismod. Nullam id dolor id nibh ultricies vehicula ut id elit. Morbi leo risus, porta ac consectetur ac, vestibulum at eros. Praesent commodo cursus magna, vel scelerisque cursus nisl consectetur et.</p>
+                  <p>Donec sed odio dui. Etiam porta sem malesuada magna mollis euismod. Nullam id dolor id nibh ultricies vehicula ut id elit. Morbi leo risus, porta ac consectetur ac, vestibulum at eros. Praesent commodo cursus magna, vel scelerisque cursus nisl consectetur et.</p>
+                  <p><a class="btn btn-success">View details &raquo;</a></p>
+                </div> -->
+                                                                
+                  </div>
+
+                    
+            </div>
+        </div>
+    </section>
+
+
+    <section id="Contactanos" data-speed="6" data-type="background">
+       <div class="container">
+
+        <br> <br><br> <br>
+               <div class="row-fluid" style="color:white">
+               
+                  <div class="col-xs-12 col-sm-9 col-md-6 col-lg-6">
+                       
+                      <date class="date"></date> <br> <br>
+<h1> CONTÁCTENOS </h1>
+  
+<author class="author"><span>Responderemos tu duda con todo gusto.</span></author>            
+  
+       
+         <form action="" accept-charset="UTF-8" method="post">            <div class="input">
+              <input type="text" name="nombre" placeholder="Nombre" autocomplete="off">
+            </div>
+            <div class="input">
+              <input type="email" name="correo" placeholder="Correo" autocomplete="off">
+            </div>
+            <div class="input">
+              <textarea name="mensaje" cols="20" rows="7" placeholder="Mensaje"></textarea>
+            </div>
+           <ul class="nav navbar-nav navbar-middle" style="padding-left:35%;">
+                   <input type="submit" value="Enviar" class="btn btn-info">
+
+                   <input type="reset" value="Limpiar" class="btn btn-warning"><br>
+                 
+                    
+                </ul>
+</form>
+                                                                
+                  </div>
+
+                   
+                     <div class="hidden-xs col-sm-9 col-md-6 col-lg-6">
+
+                
+                       <h1><br></h1><hr>
+                       
+                                                       <img src="http://icons.iconarchive.com/icons/oxygen-icons.org/oxygen/256/Apps-preferences-system-login-icon.png" alt="" class="img-thumbnail img-responsive center-block">   
+                                                                  
+                  </div>
+            </div>
+        </div>
+
+    </section>
+
+    
+
+
+    <section id="section5" data-speed="4" data-type="background" class="main">
+        <a class="arrow-wrap" href="#home">
+<span class="arrow"></span>
+<!--<span class="hint">scroll</span>-->
+</a>
+        <div class="container">
+            <div class="row-fluid" style="color:white">
+               
+                  
+            </div>
+        </div>
+    </section>
+
+
+    <section id="Ayuda" data-speed="6" data-type="background">
+        <div class="container">
+
+          <br> <br><br> <br>
+               <div class="row-fluid" style="color:white">
+               
+                  <div class="hidden-xs col-sm-9 col-md-6 col-lg-6">
+                       
+                       <h1><br></h1><hr>
+                        <img src="http://icons.iconarchive.com/icons/custom-icon-design/pretty-office-5/256/maintenance-icon.png" alt="" class="img-thumbnail img-responsive center-block">   
+                  </div>
+
+                   
+                     <div class="col-xs-12 col-sm-9 col-md-6 col-lg-6">
+ <date class="date"></date> <br> <br>
+<h1> AYUDA </h1>
+  
+<author class="author"><span>Responderemos tu duda con todo gusto.</span></author>       
+       
+         <form action="" accept-charset="UTF-8" method="post">            
+          <div class="input">
+              <input type="text" name="Empresa" placeholder="Empresa" autocomplete="off">
+          </div>
+          <div class="input">
+              <input type="text" name="Nombres" placeholder="Nombres" autocomplete="off">
+          </div>
+          <div class="input">
+              <input type="text" name="Correo" placeholder="Correo" autocomplete="off">
+          </div>
+          <div class="inputAsunto">
+              <input type="text" name="Asunto" placeholder="Asunto" autocomplete="off" style="float:left">
+
+              <select class="form-control" style="float:rigth; width:49%;height:40px;background-color:#212527">
+                <option value="">Tipo de incidente:</option>
+          <option>1</option>
+          <option>2</option>
+          <option>3</option>
+          <option>4</option>
+          <option>5</option>
+          
+         
+         
+        </select> 
+        </div>
+        <div class="inputCombo">
+        
+                </div>
+          <div class="input">
+              <textarea name="Mensaje" cols="20" rows="4" placeholder="Mensaje"></textarea>
+          </div>
+           <ul class="nav navbar-nav navbar-middle" style="padding-left:35%;">
+                   <input type="submit" value="Enviar" class="btn btn-info">
+
+                   <input type="reset" value="Limpiar" class="btn btn-warning"><br>
+                 
+                    
+                </ul>
+</form>
+                                                                
+                  </div>
+            </div>
+        </div>
+    </section>
+
+    
+
+
+    <section id="section6" data-speed="4" data-type="background" class="main">
+      
+        <div class="container">
+            <div class="row-fluid" style="color:white">
+              
+            </div>
+        </div>
+    </section>
+
+    <a href="#" class="scrollup" style="display: none;">Scroll</a>
+
+
+</body>
+</html>                                   

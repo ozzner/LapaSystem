@@ -1,0 +1,119 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{034E7B74-2416-4DF0-8DE6-58B783CE87DE}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>AccesoDatos</RootNamespace>
+    <AssemblyName>AccesoDatos</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="ADNT_Idioma.cs" />
+    <Compile Include="ADNT_PagosTwocheckout.cs" />
+    <Compile Include="ADNT_Rubro.cs" />
+    <Compile Include="ADNT_Formula.cs" />
+    <Compile Include="ADNT_FacturaDetalle.cs" />
+    <Compile Include="ADNT_Laboratorio.cs" />
+    <Compile Include="ADNT_Licencia.cs" />
+    <Compile Include="ADNT_Mantenimiento.cs" />
+    <Compile Include="ADNT_Muestra.cs" />
+    <Compile Include="ADNT_MuestraDetalle.cs" />
+    <Compile Include="ADNT_Pais.cs" />
+    <Compile Include="ADNT_Parametro.cs" />
+    <Compile Include="ADNT_ParametroEquipo.cs" />
+    <Compile Include="ADNT_PerfilUsuario.cs" />
+    <Compile Include="ADNT_Producto.cs" />
+    <Compile Include="ADNT_ProductoAtributo.cs" />
+    <Compile Include="ADNT_ProductoLaboratorio.cs" />
+    <Compile Include="ADNT_ProductoParametro.cs" />
+    <Compile Include="ADNT_UsuarioLaboratorio.cs" />
+    <Compile Include="ADNT_Usuario.cs" />
+    <Compile Include="ADNT_UnidadMedida.cs" />
+    <Compile Include="ADNT_TipoParametro.cs" />
+    <Compile Include="ADNT_RegistroTemporal.cs" />
+    <Compile Include="ADNT_Factura.cs" />
+    <Compile Include="ADNT_Equipos.cs" />
+    <Compile Include="ADNT_DetalleMuestraEquipos.cs" />
+    <Compile Include="ADNT_Empresa.cs" />
+    <Compile Include="ADNT_Ciudad.cs" />
+    <Compile Include="ADNT_Cliente.cs" />
+    <Compile Include="ADNT_Calibracion.cs" />
+    <Compile Include="ADT_Rubro.cs" />
+    <Compile Include="ADT_UsuarioLaboratorio.cs" />
+    <Compile Include="ADT_Usuario.cs" />
+    <Compile Include="ADT_UnidadMedida.cs" />
+    <Compile Include="ADT_TipoParametro.cs" />
+    <Compile Include="ADT_ProductoLaboratorio.cs" />
+    <Compile Include="ADT_ProductoParametro.cs" />
+    <Compile Include="ADT_ProductoAtributo.cs" />
+    <Compile Include="ADT_Producto.cs" />
+    <Compile Include="ADT_PerfilUsuario.cs" />
+    <Compile Include="ADT_ParametroEquipo.cs" />
+    <Compile Include="ADT_Parametro.cs" />
+    <Compile Include="ADT_Pais.cs" />
+    <Compile Include="ADT_MuestraDetalle.cs" />
+    <Compile Include="ADT_Muestra.cs" />
+    <Compile Include="ADT_Mantenimiento.cs" />
+    <Compile Include="ADT_Licencia.cs" />
+    <Compile Include="ADT_Laboratorio.cs" />
+    <Compile Include="ADT_Formula.cs" />
+    <Compile Include="ADT_FacturaDetalle.cs" />
+    <Compile Include="ADT_RegistroTemporal.cs" />
+    <Compile Include="ADT_Factura.cs" />
+    <Compile Include="ADT_Equipos.cs" />
+    <Compile Include="ADT_Empresa.cs" />
+    <Compile Include="ADT_DetalleMuestraEquipos.cs" />
+    <Compile Include="ADT_Ciudad.cs" />
+    <Compile Include="ADT_Cliente.cs" />
+    <Compile Include="ADT_Calibracion.cs" />
+    <Compile Include="Conexion.cs" />
+    <Compile Include="ADT_Atributo.cs" />
+    <Compile Include="ADNT_Atributo.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Entidades\Entidades.csproj">
+      <Project>{8aed2196-d3ae-4152-82fd-d8ef55036413}</Project>
+      <Name>Entidades</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

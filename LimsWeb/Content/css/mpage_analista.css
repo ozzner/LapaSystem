@@ -1,0 +1,138 @@
+
+@font-face {
+    font-family: 'myndraineregular';
+    src: url('../fonts/myndraine-webfont.ttf');
+    src: url('../fonts/myndraine-webfont.eot?#iefix') format('embedded-opentype'), url('../fonts/myndraine-webfont.woff2') format('woff2'), url('../fonts/myndraine-webfont.woff') format('woff'), url('../fonts/myndraine-webfont.ttf') format('truetype'), url('../fonts/myndraine-webfont.svg#myndraineregular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'jockey_oneregular';
+    src: url('../fonts/jockeyone-regular-webfont.eot');
+    src: url('../fonts/jockeyone-regular-webfont.eot?#iefix') format('embedded-opentype'), url('../fonts/jockeyone-regular-webfont.woff2') format('woff2'), url('../fonts/jockeyone-regular-webfont.woff') format('woff'), url('../fonts/jockeyone-regular-webfont.ttf') format('truetype'), url('../fonts/jockeyone-regular-webfont.svg#jockey_oneregular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+
+* {
+    margin: 0px;
+    padding: 0px;
+    font-size: 14px;
+    font-family: Tahoma;
+}
+
+body {
+    background: rgba(221,221,221,0.5);
+}
+
+header {
+    background: #428bca;
+    height: 50px;
+    width: 1350px;
+    border-bottom: solid 1px #fff;
+    box-shadow: 0px 1px 1px #b9b9b9;
+}
+
+nav {
+    float: left;
+    display: inline-block;
+}
+
+#datos {
+    width: 440px;
+    height: 50px;
+    text-align: center;
+    margin: 0 auto;
+    float: right;
+    /*background:yellow;*/
+}
+
+
+.labelB {
+    /*background:red;*/
+    width: 200px;
+    height: 25px;
+}
+
+.labelA {
+    width: 75px;
+    height: 25px;
+}
+
+.btnCerrar {
+    height: 25px;
+    width: 110px;
+    background: #3399ff;
+    font-size: 13px;
+    color: #fff;
+    border: solid 2px #fff;
+    border-radius: 3px;
+    font-family: Calibri;
+    cursor: pointer;
+}
+
+.btnCerrar, .labelA, .labelB {
+    vertical-align: top;
+    display: inline-block;
+    top: 12.5px;
+    position: relative;
+    color: #fff;
+}
+
+.bienvenida, .nombres {
+    position: relative;
+    top: 4px;
+    font-family: Calibri;
+    text-align: center;
+}
+
+.nombres {
+    float: left;
+    margin-left: 10px;
+}
+
+.mymenu {
+    width: 600px;
+    height: 50px;
+    display: inline-block;
+    margin-left: 200px;
+}
+
+li {
+    list-style: none;
+    display: inline-block;
+    vertical-align: top;
+   float:left;
+}
+
+    li a {
+        top: 13.5px;
+        position: relative;
+        font-family: Verdana;
+        text-decoration: none;
+        color: #fff;
+        position: relative;
+        padding: 15px 22px;
+        transition: all 0.6s ease;
+        -webkit-transition: all 0.6s ease;
+        -moz-transition: all 0.6s ease;
+        -o-transition: all 0.6s ease;
+    }
+
+        li a:hover {
+            background: rgba(255,255,255,0.3);
+        }
+
+.active {
+    border-bottom: solid 2px #fff;
+    background: none;
+    padding: 5px 22px;
+}
+
+.active:hover {
+    background: none;
+    cursor:default;
+      border-bottom: solid 2px #fff;
+}
