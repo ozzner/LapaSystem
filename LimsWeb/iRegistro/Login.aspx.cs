@@ -207,6 +207,11 @@ namespace LimsWeb.iRegistro
                 , ref ip
                 , ref idioma
                 );
+
+            if (idioma.Equals(""))
+                idioma = "ES";
+            Session["Etiquetas"] = oLN_Idiona.ObtenerEtiquetasPorIdioma(idioma);
+            Dictionary<string, string> etiquetas = (Dictionary<string, string>)Session["Etiquetas"];
                 
 
             if (resultado == 0)

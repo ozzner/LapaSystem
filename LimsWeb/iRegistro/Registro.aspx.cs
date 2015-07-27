@@ -22,12 +22,88 @@ namespace LimsWeb.iRegistro
 
         List<ENT_RegistroTemporal> oList_RegTemp = new List<ENT_RegistroTemporal>();
 
+        protected string complete;
+        protected string ruc_nit;
+        protected string company;
+        protected string info;
+        protected string rz;
+        protected string country;
+        protected string city;
+        protected string rb;
+        protected string segment;
+        protected string type;
+        protected string user;
+        protected string email;
+        protected string clave;
+        protected string conf_clave;
+        protected string language;
+        protected string address;
+        protected string domain;
+        protected string terminos;
+
+        public String lang;
+
 
         protected void Page_Load(object sender, EventArgs e)
         {
             setVisibleFalse();
             int resultado = -1;
             string serial = "";
+
+
+            lang = Request.UserLanguages[0];
+
+            if (lang.Contains("es"))
+            {
+                complete = "COMPLETE EL REGISTRO";
+                ruc_nit = "RUC / INIT";
+                company = "EMPRESA";
+
+                rz = "RazónSocial";
+                country = "País";
+                city = "Ciudad";
+                rb = "Rubro";
+                segment = "Segmento";
+                type = "Tipo de uso";
+                user = "USUARIO";
+                email = "Correo";
+                clave = "Clave";
+                conf_clave = "Confirmar clave";
+                language = "Idioma";
+                address = "Dirección";
+                domain = "Dominio";
+                terminos = "Al hacer clic en 'Finalizar Registro', usted está de acuerdo con nuestros Términos y Condiciones.";
+                chkAceptar.Text = "Estoy de acuerdo";
+                btnFinalizar.Text = "FINALIZAR";
+
+
+
+            }
+            if (lang.Contains("en"))
+            {
+                complete = "COMPLETE THE REGISTER";
+                ruc_nit = "RUC / INIT";
+                company = "COMPANY";
+
+                rz = "Name Company";
+                country = "Country";
+                city = "City";
+                rb = "Category";
+                segment = "Segment";
+                type = "Tipe of use";
+                user = "USER";
+                email = "Email";
+                clave = "Password";
+                conf_clave = "Confirm Password";
+                language = "Language";
+                address = "Address";
+                domain = "Domain";
+                terminos = "Clicking 'Finish Registration' , you agree to our Terms and Conditions.";
+                chkAceptar.Text = "I agree";
+                btnFinalizar.Text = "END";
+
+
+            }
 
             try
             {
@@ -125,21 +201,21 @@ namespace LimsWeb.iRegistro
             switch (ddlRubro.SelectedValue.ToString())
             {
                 case "alimentos animal":
-                    oEnt_Empresa.segmento = segmento1.SelectedValue.ToString();break;
+                    oEnt_Empresa.segmento = segmento1.SelectedValue.ToString(); break;
                 case "alimentos consumo":
-                    oEnt_Empresa.segmento = segmento2.SelectedValue.ToString();break;
-                case "alimentos insumos": 
-                    oEnt_Empresa.segmento = segmento3.SelectedValue.ToString();break;
+                    oEnt_Empresa.segmento = segmento2.SelectedValue.ToString(); break;
+                case "alimentos insumos":
+                    oEnt_Empresa.segmento = segmento3.SelectedValue.ToString(); break;
                 case "industrial extraccion":
-                    oEnt_Empresa.segmento = segmento4.SelectedValue.ToString();break;
+                    oEnt_Empresa.segmento = segmento4.SelectedValue.ToString(); break;
                 case "industrial farma":
-                    oEnt_Empresa.segmento = segmento5.SelectedValue.ToString();break;
+                    oEnt_Empresa.segmento = segmento5.SelectedValue.ToString(); break;
                 case "industrial maquilado":
-                    oEnt_Empresa.segmento = segmento6.SelectedValue.ToString();break;
+                    oEnt_Empresa.segmento = segmento6.SelectedValue.ToString(); break;
                 case "industrial quimico":
-                    oEnt_Empresa.segmento = segmento7.SelectedValue.ToString();break;
+                    oEnt_Empresa.segmento = segmento7.SelectedValue.ToString(); break;
                 case "industrial vestido":
-                    oEnt_Empresa.segmento = segmento8.SelectedValue.ToString();break;
+                    oEnt_Empresa.segmento = segmento8.SelectedValue.ToString(); break;
             }
 
             oEnt_Empresa.Dominio = txtDominio.Text.Trim();

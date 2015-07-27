@@ -28,11 +28,11 @@ namespace AccesoDatos
 
         public string strCxn()
         {
-            //string cxn = "Data Source='JOSEQP-PC\\ServidorSQL';Initial Catalog=SistemaWeb;User ID=sa;Password=Spktrowo2";// ConnectionString.ConnectionStrings["conexionLocal"].ConnectionString;
-            string cxn = "Data Source='RSANTILLANC-PC\\SQLEXPRESS';Initial Catalog=SistemaWeb;User ID=sa;password=b14nc4";// ConnectionString.ConnectionStrings["conexionLocal"].ConnectionString;
+            string cxn = "Data Source='JULIO-PC\\SQLEXPRESS';Initial Catalog=SistemaWeb;User ID=sa;Password=Wasitec2014";// ConnectionString.ConnectionStrings["conexionLocal"].ConnectionString;
+            //string cxn = "Data Source='RSANTILLANC-PC\\SQLEXPRESS';Initial Catalog=SistemaWeb;User ID=sa;password=b14nc4";// ConnectionString.ConnectionStrings["conexionLocal"].ConnectionString;
             return cxn;
-        
-        
+
+
         }
 
         public Conexion()
