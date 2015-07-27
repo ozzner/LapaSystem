@@ -39,6 +39,7 @@ namespace LimsWeb.iAdministrador
         protected void Page_Load(object sender, EventArgs e)
         {
             string ruc = string.Empty;
+          
             
             try
             {
@@ -59,8 +60,9 @@ namespace LimsWeb.iAdministrador
 
                 
             }
-            catch
+            catch(Exception ex)
             {
+                Console.WriteLine(ex.Message);
                 Response.Redirect("../iRegistro/Login.aspx");
             }
 
