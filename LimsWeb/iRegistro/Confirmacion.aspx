@@ -8,7 +8,7 @@
     <link href="../Content/css/EstilosRegistro.css" rel="stylesheet" />
     <link href="../Content/css/main_fonts.css" rel="stylesheet" />
 
-    <title>Confirmación</title>
+    <title><%= confirm %></title>
 
     
 
@@ -17,17 +17,18 @@
     <form id="form1" runat="server">
      
         <div class="validacion color" style="height:270px;">    
-            <h1> VALIDACION </h1>
+            <h1> <%= validate %> </h1>
             <div class="linea"></div>
                <br />
 
             <div id="informacion" class="color">
-            Porfavor ingrese el codigo de activación para poder continuar con el registro.    
+            <%= please_insert %>
+                
             </div>
             <br />
-            Codigo de validación
+            <%= code_validate %>
             <br />
-            <asp:TextBox runat="server" ID="txtSerial"  autocomplete="off" placeholder="Ingrese aquí su codigo de activación" CssClass="txts"></asp:TextBox>
+            <asp:TextBox runat="server" ID="txtSerial"  autocomplete="off" placeholder="" CssClass="txts"></asp:TextBox>
              <br />
 
 
@@ -36,7 +37,7 @@
            
              <br />
 
-            <asp:Button runat="server" ID="btnVerificar" Text="Verificar" CssClass="btns" OnClick="btnVerificar_Click"  />
+            <asp:Button runat="server" ID="btnVerificar" CssClass="btns" OnClick="btnVerificar_Click"  />
             
        <br />       <br />          
         </div>

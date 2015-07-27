@@ -33,6 +33,7 @@ namespace LimsWeb.iRegistro
         protected string segment;
         protected string type;
         protected string user;
+        protected string fullname;
         protected string email;
         protected string clave;
         protected string conf_clave;
@@ -40,6 +41,11 @@ namespace LimsWeb.iRegistro
         protected string address;
         protected string domain;
         protected string terminos;
+        protected string es;
+        protected string en;
+        protected string msj_checkregister;
+        protected string msj_registerok;
+        protected string msj_registerincomplete;
 
         public String lang;
 
@@ -66,6 +72,7 @@ namespace LimsWeb.iRegistro
                 segment = "Segmento";
                 type = "Tipo de uso";
                 user = "USUARIO";
+                fullname = "Nombre completo";
                 email = "Correo";
                 clave = "Clave";
                 conf_clave = "Confirmar clave";
@@ -75,7 +82,14 @@ namespace LimsWeb.iRegistro
                 terminos = "Al hacer clic en 'Finalizar Registro', usted está de acuerdo con nuestros Términos y Condiciones.";
                 chkAceptar.Text = "Estoy de acuerdo";
                 btnFinalizar.Text = "FINALIZAR";
-
+                rbEmpresa.Text = "Privado";
+                rbServicio.Text = "Servicio";
+                esp.Text = "Español";
+                eng.Text = "Inglés";
+                selec.Text = "--- Seleccione ---";
+                msj_checkregister = "Para finalizar el registro debe estar de acuerdo con los términos y condiciones.";
+                msj_registerok = "Se ha guardado correctamente.";
+                msj_registerincomplete = "No se completo el registro. Se ha detectado que el numero de RUC ya se encuentra registrado en el sistema.";
 
 
             }
@@ -84,7 +98,6 @@ namespace LimsWeb.iRegistro
                 complete = "COMPLETE THE REGISTER";
                 ruc_nit = "RUC / INIT";
                 company = "COMPANY";
-
                 rz = "Name Company";
                 country = "Country";
                 city = "City";
@@ -92,6 +105,7 @@ namespace LimsWeb.iRegistro
                 segment = "Segment";
                 type = "Tipe of use";
                 user = "USER";
+                fullname = "Full name";
                 email = "Email";
                 clave = "Password";
                 conf_clave = "Confirm Password";
@@ -101,7 +115,14 @@ namespace LimsWeb.iRegistro
                 terminos = "Clicking 'Finish Registration' , you agree to our Terms and Conditions.";
                 chkAceptar.Text = "I agree";
                 btnFinalizar.Text = "END";
-
+                rbEmpresa.Text = "Private";
+                rbServicio.Text = "Service";
+                esp.Text = "Spanish";
+                eng.Text = "English";
+                selec.Text = "--- Select ---";
+                msj_checkregister = "To complete the registration has to agree to the terms and conditions.";
+                msj_registerok = "It has been saved successfully.";
+                msj_registerincomplete = "Registration is not complete. It seems that the number of RUC already registered in the system.";
 
             }
 
@@ -174,7 +195,7 @@ namespace LimsWeb.iRegistro
             { }
             else
             {
-                string msj = "Para poder finalizar el registro estar de acuerdo con los términos y condiciones";
+                string msj = msj_checkregister; // "Para poder finalizar el registro estar de acuerdo con los términos y condiciones";
                 ScriptManager.RegisterStartupScript(this, typeof(Page), "RechazaContrato", "alert('" + msj + "');", true);
                 return;
             }
@@ -240,7 +261,7 @@ namespace LimsWeb.iRegistro
 
             if (resultado == 0)
             {
-                string msj = "Registro almacenado correctamente. ";
+                string msj = msj_registerok; // "Registro almacenado correctamente.";
                 ScriptManager.RegisterStartupScript(this, typeof(Page), "RegistroCompletado", "alert('" + msj + "');", true);
 
                 txtRuc.Text = "";
@@ -260,7 +281,7 @@ namespace LimsWeb.iRegistro
             }
             else
             {
-                string msj = "No se completo el registro. Se ha detectado que el numero de RUC ya se encuentra registrado en el sistema";
+                string msj = msj_registerincomplete; // "No se completo el registro. Se ha detectado que el numero de RUC ya se encuentra registrado en el sistema";
                 ScriptManager.RegisterStartupScript(this, typeof(Page), "MostrarMensaje", "alert('" + msj + "');", true);
             }
         }

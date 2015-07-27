@@ -85,6 +85,24 @@ namespace LimsWeb.iRegistro {
         protected global::System.Web.UI.WebControls.DropDownList ddlIdioma;
         
         /// <summary>
+        /// esp control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.ListItem esp;
+        
+        /// <summary>
+        /// eng control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.ListItem eng;
+        
+        /// <summary>
         /// ddlCiudad2 control.
         /// </summary>
         /// <remarks>
@@ -128,6 +146,15 @@ namespace LimsWeb.iRegistro {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.DropDownList ddlRubro;
+        
+        /// <summary>
+        /// selec control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.ListItem selec;
         
         /// <summary>
         /// segmento1 control.

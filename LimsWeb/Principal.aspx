@@ -9,7 +9,7 @@
         <link rel="stylesheet" type="text/css" href="css/component.css" />
         <script src="js/modernizr.custom.js"></script>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
-    <title>L.A.P.A. REGISTRO</title>
+    <title><%= title %></title>
     <script src="Content/js/jquery-1.8.2.js"></script>
     <script src="Content/js/jquery-1.8.2.min.js"></script>
     <link href="Content/css/EstilosRegistro.css" rel="stylesheet" />
@@ -137,7 +137,7 @@
            
              <br />
 
-            <asp:Button runat="server" ID="btnRegistrar" Text="REGISTRAR" CssClass="btns" OnClick="btnRegistrar_Click"  OnClientClick="javascript:return confirm('¿Esta seguro de que la información proporcionada es la correcta?');"  />
+            <asp:Button runat="server" ID="btnRegistrar" CssClass="btns" OnClick="btnRegistrar_Click" /> <!-- OnClientClick="javascript:return confirm('¿Esta seguro de que la información proporcionada es la correcta?');" -->
             <div id="informacion" style="background:none;margin-top:10px;text-align:justify; width:90%;margin:10px auto;font-size:small">
                 
             <%= aviso %>
