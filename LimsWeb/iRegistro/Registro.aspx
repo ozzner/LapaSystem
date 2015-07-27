@@ -18,22 +18,22 @@
         <div class="ContenedorRegistro color">
 
 
-            <h1>COMPLETANDO REGISTRO</h1>
+            <h1><%= complete %></h1>
             <div style="width: 830px; height: 1px; background: #3399ff;"></div>
 
             <br />
 
             <fieldset class="fielset" style="float: left;">
-                <legend class="color">EMPRESA</legend>
-                <div class="etqs color">RUC/NIT</div>
-                <asp:TextBox runat="server" ID="txtRuc" class="txts tamanoNormal" placeholder="Ingrese RUC" autocomplete="off"></asp:TextBox>
+                <legend class="color"><%= company %></legend>
+                <div class="etqs color"><%= ruc_nit %></div>
+                <asp:TextBox runat="server" ID="txtRuc" class="txts tamanoNormal" placeholder="" autocomplete="off"></asp:TextBox>
                 <asp:RequiredFieldValidator ID="rfvRuc" ControlToValidate="txtRuc" runat="server" ErrorMessage="*" ForeColor="Red"></asp:RequiredFieldValidator>
                 <br />
-                <div class="etqs color">Razón Social</div>
+                <div class="etqs color"><%= rz %></div>
                 <asp:TextBox runat="server" ID="txtRazonSocial" ReadOnly class="txts tamanoNormal soloLectura"></asp:TextBox>
                 <asp:RequiredFieldValidator ID="rfvRazonSocial" ControlToValidate="txtRazonSocial" runat="server" ErrorMessage="*" ForeColor="Red"></asp:RequiredFieldValidator>
                 <br />
-                <div class="etqs color">Pais</div>
+                <div class="etqs color"><%= country %></div>
                 <asp:DropDownList runat="server" ID="ddlPais" AutoPostBack="True" class="txts tamanoNormal">
                     <asp:ListItem Value="AF">Afghanistan</asp:ListItem>
                     <asp:ListItem Value="AX">Åland Islands</asp:ListItem>
@@ -283,13 +283,13 @@
                 </asp:DropDownList>
                 <asp:XmlDataSource ID="XmlDataSource1" runat="server"></asp:XmlDataSource>
                 <br />
-                <div class="etqs color">Idioma</div>
+                <div class="etqs color"><%= language %></div>
                 <asp:DropDownList runat="server" ID="ddlIdioma" class="txts tamanoNormal"> 
                     <asp:ListItem Value="ES">Español</asp:ListItem>
                     <asp:ListItem Value="EN">Inglés</asp:ListItem>
                 </asp:DropDownList>
                 <br />
-                <div class="etqs color">Ciudad</div>
+                <div class="etqs color"><%= city %></div>
                 <asp:TextBox runat="server" ID="ddlCiudad2" class="txts tamanoNormal" placeholder="Ingrese ciudad" autocomplete="off"></asp:TextBox>
                 <asp:RequiredFieldValidator ID="RequiredFieldValidator1" ControlToValidate="txtDireccion" runat="server" ErrorMessage="*" ForeColor="Red"></asp:RequiredFieldValidator>
                 <br />
@@ -298,13 +298,13 @@
                 <asp:DropDownList runat="server" ID="ddlCiudad" class="txts tamanoNormal">
                 </asp:DropDownList>
                 <br />--%>
-                <div class="etqs color">Dirección</div>
+                <div class="etqs color"><%= address %></div>
                 <asp:TextBox runat="server" ID="txtDireccion" class="txts tamanoNormal" placeholder="Ingrese dirección" autocomplete="off"></asp:TextBox>
                 <asp:RequiredFieldValidator ID="rfvDireccion" ControlToValidate="txtDireccion" runat="server" ErrorMessage="*" ForeColor="Red"></asp:RequiredFieldValidator>
                 <br />
 
                 <div class="rubros_container color">
-                    <div class="etqs color">Rubro</div>
+                    <div class="etqs color"><%= rb %></div>
                     <asp:DropDownList runat="server" ID="ddlRubro" class="txts tamanoNormal" OnSelectedIndexChanged="ddlRubro_SelectedIndexChanged" AutoPostBack="True" placeholder="Ingrese rubro">
 
                         <asp:ListItem Selected="True" Value="default">--Seleccione--</asp:ListItem>
@@ -319,7 +319,7 @@
 
                     </asp:DropDownList>
 
-                    <div class="etqs color">Segmento</div>
+                    <div class="etqs color"><%= segment %></div>
 
                     <asp:DropDownList runat="server" ID="segmento1" class="txts tamanoNormal">
                         <asp:ListItem Value="harinas">Harina de pescado</asp:ListItem>
@@ -401,14 +401,14 @@
                 </div>
 
                 <br />
-                <div class="etqs color">Dominio</div>
+                <div class="etqs color"><%= domain %></div>
                 <asp:TextBox runat="server" ID="txtDominio" ReadOnly class="txts tamanoNormal soloLectura"></asp:TextBox>
                 <br />
-                <div class="etqs color">Tipo de Uso</div>
-                <asp:RadioButton runat="server" ID="rbEmpresa" GroupName="Tipos" Checked Text="Privado" />
+                <div class="etqs color"><%= type %></div>
+                <asp:RadioButton runat="server" ID="rbEmpresa" GroupName="Tipos" Checked="true" Text="Privado" />
                 <asp:RadioButton runat="server" ID="rbServicio" GroupName="Tipos" Text="Servicio" />
                 <br />
-                <div class="etqs color">Correo</div>
+                <div class="etqs color"><%= email %></div>
                 <asp:TextBox runat="server" ID="txtCorreo" ReadOnly class="txts tamanoNormal soloLectura"></asp:TextBox>
                 <asp:RequiredFieldValidator ID="rfvCorreo" ControlToValidate="txtCorreo" runat="server" ErrorMessage="*" ForeColor="Red"></asp:RequiredFieldValidator>
                 <br />
@@ -417,23 +417,23 @@
 
 
             <fieldset class="fielset" style="float: right;">
-                <legend class="color">USUARIO</legend>
+                <legend class="color"><%= user %></legend>
                 <div class="etqs color">Nombre Completo</div>
                 <asp:TextBox runat="server" ID="txtNombre" class="txts tamanoNormal" placeholder="Ingrese nombre completo" autocomplete="off"></asp:TextBox>
                 <asp:RequiredFieldValidator ID="rfvNombre" runat="server" ControlToValidate="txtNombre" ErrorMessage="*" ForeColor="Red"></asp:RequiredFieldValidator>
                 <br />
-                <div class="etqs color">Correo</div>
+                <div class="etqs color"><%= email %></div>
                 <asp:TextBox runat="server" ID="txtCorreoE" ReadOnly class="txts tamanoNormal soloLectura"></asp:TextBox>
                 <asp:RequiredFieldValidator ID="rfvCorreoE" runat="server" ControlToValidate="txtCorreoE" ErrorMessage="*" ForeColor="Red"></asp:RequiredFieldValidator>
                 <br />
                 <%--   <div class="etqs color"> Usuario</div>
             <asp:TextBox runat="server" ID="txtUsuario" class="txts tamanoNormal"></asp:TextBox>
             <br />--%>
-                <div class="etqs color">Clave</div>
+                <div class="etqs color"><%= clave %></div>
                 <asp:TextBox runat="server" ID="txtClave" class="txts tamanoNormal" TextMode="Password" placeholder="Ingrese clave" autocomplete="off"></asp:TextBox>
                 <asp:RequiredFieldValidator ID="rfvClave" runat="server" ControlToValidate="txtClave" ErrorMessage="*" ForeColor="Red"></asp:RequiredFieldValidator>
                 <br />
-                <div class="etqs color">Confirmar Clave</div>
+                <div class="etqs color"><%= conf_clave %></div>
                 <asp:TextBox runat="server" ID="txtClaveConf" class="txts tamanoNormal" TextMode="Password" placeholder="Repite clave" autocomplete="off"></asp:TextBox><br />
                 <asp:CompareValidator ID="cvClaveConf" runat="server" ControlToValidate="txtClaveConf" ControlToCompare="txtClave" Style="float: right;" ErrorMessage="La confirmación de la clave no coincide." ForeColor="red"></asp:CompareValidator>
                 <br />
@@ -443,13 +443,13 @@
             <br />
             <br />
             <div id="InformacionTerminos" style="float: right;">
-                Al hacer clic en "Finalizar Registro", usted está de acuerdo con nuestros Términos y Condiciones.
+                <%= terminos %>
                 <br />
-                <asp:CheckBox runat="server" GroupName="opciones" Style="display: inline-block; background: none" ID="chkAceptar" Text="Estoy de acuerdo" /><br />
+                <asp:CheckBox runat="server" GroupName="opciones" Style="display: inline-block; background: none" ID="chkAceptar"/><br /> <!--Text="Estoy de acuerdo"-->
             </div>
 
             <br />
-            <asp:Button runat="server" CssClass="btns" ID="btnFinalizar" Style="width: 850PX" Text="FINALIZAR REGISTRO" OnClick="btnFinalizar_Click" />
+            <asp:Button runat="server" CssClass="btns" ID="btnFinalizar" Style="width: 850PX"  OnClick="btnFinalizar_Click" /><!--Text="FINALIZAR REGISTRO"-->
             <br />
             <br />
 
