@@ -1,0 +1,77 @@
+﻿.row .col-md-8{
+
+}
+
+#tit_planes .col-md-2{
+    color: rgba(64,139,201,1) !important;
+    font-size: 18px;
+    text-align: center;
+    padding: 20px;
+    background: none !important;
+        font-weight: bold;
+}
+
+#planes{
+    color: rgba(64,139,201,1) !important;
+    font-size: 16px;
+    padding: 10px;
+    background: rgba(26,134,127,0.05);
+    text-align: center;
+    transition: 1s;
+    margin-left: 2px;
+        font-weight: bold;
+}
+
+#planes:hover{
+    background: rgba(26,134,127,0.2);
+}
+
+#empresa_servicio{
+
+    font-weight: bold;
+    margin-top: 14px;
+}
+
+#empresa_servicio .col-md-1{
+        color:rgba(26,134,127,1) !important;
+}
+
+#pricing{
+    font-weight:bold;
+}
+
+.col-md-1, .col-md-2,.col-md-8{
+    text-align: center;
+}
+
+.row div:nth-child(odd) { /*(even) or (2n 0)*/
+    background:rgba(185,185,185,0.15);
+}
+.row div:hover{
+    background:rgba(185,185,185,0.5);
+}
+
+#plans_container{
+ 
+    margin: 0 auto;
+    padding-left: 150px;
+    padding-bottom: 25px;
+    width: 100%;
+
+  
+}
+
+#cont_plan{
+      -webkit-box-shadow: 0px 0px 4px 4px color:rgba(26,134,127,0.1);
+    -moz-box-shadow:    0px 0px 4px 4px rgba(64,139,201,0.1);
+    box-shadow:         0px 0px 4px 4px rgba(64,139,201,0.1);
+
+   border-radius: 5px;
+   width: 97%;
+  
+}
+
+.row{
+    font-size: 15.5px;
+
+}

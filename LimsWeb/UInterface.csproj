@@ -155,6 +155,7 @@
     <Content Include="Content\css\main_fonts.css" />
     <Content Include="Content\css\mpage_analista.css" />
     <Content Include="Content\css\plans2checkout.css" />
+    <Content Include="Content\css\precing_style.css" />
     <Content Include="Content\css\ui-lightness\images\animated-overlay.gif" />
     <Content Include="Content\css\ui-lightness\images\ui-bg_diagonals-thick_18_b81900_40x40.png" />
     <Content Include="Content\css\ui-lightness\images\ui-bg_diagonals-thick_20_666666_40x40.png" />
