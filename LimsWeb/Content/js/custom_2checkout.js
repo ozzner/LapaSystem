@@ -7,12 +7,7 @@ function MostrarMensaje() {
 }
 
 $(document).ready(function () {
-    $("#message_span").hide();
+    //MostrarMensaje();
+    //OcultarMensaje();
 });
 
-function showMessage(id) {
-    alert(id);
-    $("#message_span").show();
-    $("#message_span").val(id);
-
-}

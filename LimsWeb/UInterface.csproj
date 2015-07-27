@@ -203,10 +203,12 @@
     <Content Include="Content\img_publicidad\img12.jpg" />
     <Content Include="Content\js\bootstrap.js" />
     <Content Include="Content\js\bootstrap.min.js" />
+    <Content Include="Content\js\custom_2checkout.js" />
     <Content Include="Content\js\jquery-1.10.2.js" />
     <Content Include="Content\js\jquery-ui-1.10.4.js" />
     <Content Include="Content\js\jquery-ui-1.10.4.min.js" />
     <Content Include="Content\js\jquery.countdownandup.js" />
+    <Content Include="Content\js\main_js_lapa.js" />
     <Content Include="Content\js\Reloj.js" />
     <Content Include="iAdministrador\Cliente.aspx" />
     <Content Include="iAdministrador\Historial.aspx" />

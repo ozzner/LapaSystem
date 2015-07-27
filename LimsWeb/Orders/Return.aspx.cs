@@ -68,16 +68,16 @@ namespace LimsWeb.Orders
                 String message;
                 if (resultado > 0)
                 {
-                    message = "Pago grabado y realizado correctamente. Código de operación: " + entityPayment.numberOrder;
+                    message = "¡Pago correcto! Código de operación: " + entityPayment.numberOrder;
                 }
                 else {
-                    message = "Error al registrar el pago. consulte a soporte (COD_001)";
+                    message = "Error al registrar el pago. Consulte a soporte (PAY_001)";
                 }
 
                 Response.Redirect("../iAdministrador/vPlanes.aspx?message='" + message + "'");
               
             }else{
-                String msj = "Hubo un error. Con sus credenciales";
+                String msj = "Hubo un error con sus credenciales";
                 Response.Redirect("../iAdministrador/vPlanes.aspx?message='" + msj + "'");
             }
             

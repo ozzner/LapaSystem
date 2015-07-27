@@ -14,7 +14,7 @@
 <body id="main_plans">
     <div class="tituloInfo">
         PLANES &nbsp;&nbsp;&nbsp;<a id="ver_detalles" target="_blank" href="https://www.lapa-tec.com/#Planes">Ver detalles</a>
-        &nbsp; &nbsp;<span runat="server" id="message_span" class="MySuccess">Los mensajes van aquí.</span>
+        &nbsp; &nbsp;<span runat="server" id="message_span" class="MySuccess"><%= message %></span>
     </div>
     <form id="form_plans" runat="server">
         <div>
@@ -74,7 +74,7 @@
                             <li>Ilimitado</li>
                             <li>SI exporta resportes</li>
                             <li>NO Logo personalizado</li>
-                            <li><a href='https://sandbox.2checkout.com/checkout/purchase?sid=901281879&quantity=1&product_id=2'>Adquirir</a></li>
+                            <li><a href='https://sandbox.2checkout.com/checkout/purchase?sid=901281879&quantity=1&product_id=4'>Alquilar</a></li>
                         </ul>
 
 
@@ -90,7 +90,7 @@
                             <li>Ilimitado</li>
                             <li>SI exporta resportes</li>
                             <li>NO Logo personalizado</li>
-                            <li><a href='https://sandbox.2checkout.com/checkout/purchase?sid=901281879&quantity=1&product_id=2'>Adquirir</a></li>
+                            <li><a href='https://sandbox.2checkout.com/checkout/purchase?sid=901281879&quantity=1&product_id=3'>Adquirir</a></li>
                         </ul>
 
                           <ul>
@@ -105,7 +105,7 @@
                             <li>Ilimitado</li>
                             <li>SI exporta resportes</li>
                             <li>SI Logo personalizado</li>
-                            <li><a href='https://sandbox.2checkout.com/checkout/purchase?sid=901281879&quantity=1&product_id=2'>Adquirir</a></li>
+                            <li><a href='https://sandbox.2checkout.com/checkout/purchase?sid=901281879&quantity=1&product_id=5'>Adquirir</a></li>
                         </ul>
 
                          <ul>
@@ -120,7 +120,7 @@
                             <li>Ilimitado</li>
                             <li>SI exporta resportes</li>
                             <li>SI Logo personalizado</li>
-                            <li><a href='https://sandbox.2checkout.com/checkout/purchase?sid=901281879&quantity=1&product_id=2'>Adquirir</a></li>
+                            <li><a href='https://sandbox.2checkout.com/checkout/purchase?sid=901281879&quantity=1&product_id=6'>Adquirir</a></li>
                         </ul>
                     </div>
 
