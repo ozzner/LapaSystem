@@ -12,12 +12,14 @@ $(document).ready(function () {
     if (isService) {
 
         $("#gratis_servicio").attr("disabled", true).hide();
+        $("#gratis_empresa").attr("disabled",true).hide();
         $("#basico_servicio").attr("disabled", true).hide();
         $("#corporativo_servicio").attr("disabled", true).hide();
 
 
     } else {
         $("#gratis_empresa").attr("disabled", true).hide();
+        $("#gratis_servicio").attr("disabled",true).hide();
         $("#basico_empresa").attr("disabled", true).hide();
         $("#corporativo_empresa").attr("disabled", true).hide();
     }
