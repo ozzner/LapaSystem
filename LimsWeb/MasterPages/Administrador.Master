@@ -298,7 +298,7 @@
         }
 
         function ShowPlanes(url) {
-            window.open(url, 'ventana8', 'top=0,left=180,height=660,width=950,scrollbars=0,resizable=0,location=no');
+            window.open(url, 'ventana8', 'top=0,left=180,height=650,width=680,scrollbars=0,resizable=0,location=no');
         }
 
     </script>

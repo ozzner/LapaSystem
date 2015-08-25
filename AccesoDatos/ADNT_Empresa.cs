@@ -126,6 +126,7 @@ namespace AccesoDatos
                     oEnt_Empresa.Direccion = DrSql.GetString(DrSql.GetOrdinal("Direccion"));
                     oEnt_Empresa.Dominio = DrSql.GetString(DrSql.GetOrdinal("Dominio"));
                     oEnt_Empresa.Servicio = DrSql.GetBoolean(DrSql.GetOrdinal("Servicio"));
+                    oEnt_Empresa.TipoUsoID = DrSql.GetInt32(DrSql.GetOrdinal("Paquete"));
                     var p = DrSql.GetSqlValue(DrSql.GetOrdinal("PathLogo"));
                     var c = DBNull.Value;
                     oEnt_Empresa.PathLogo = (DrSql.IsDBNull(DrSql.GetOrdinal("PathLogo"))) ? "" : 

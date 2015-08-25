@@ -107,6 +107,13 @@
             </div>
 
             <asp:Label ID="txtUso" Text="Servicio" class="textboxes" runat="server"></asp:Label>
+
+
+             <div class="titulo">
+               Plan
+            </div>
+
+            <asp:Label ID="txtPlanes" Text="Planes" class="textboxes" runat="server"></asp:Label>
         </div>
 
 

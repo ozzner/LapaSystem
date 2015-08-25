@@ -22,6 +22,24 @@ namespace LimsWeb.iAdministrador {
         protected global::System.Web.UI.HtmlControls.HtmlGenericControl message_span;
         
         /// <summary>
+        /// Control type_package.
+        /// </summary>
+        /// <remarks>
+        /// Campo generado automáticamente.
+        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+        /// </remarks>
+        protected global::System.Web.UI.HtmlControls.HtmlGenericControl type_package;
+        
+        /// <summary>
+        /// Control type_plan.
+        /// </summary>
+        /// <remarks>
+        /// Campo generado automáticamente.
+        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+        /// </remarks>
+        protected global::System.Web.UI.HtmlControls.HtmlGenericControl type_plan;
+        
+        /// <summary>
         /// Control type_service.
         /// </summary>
         /// <remarks>

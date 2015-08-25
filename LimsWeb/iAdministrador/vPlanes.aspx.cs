@@ -11,10 +11,16 @@ namespace LimsWeb.iAdministrador
     {
         protected string message;
         public String servicio;
+        public String paquete;
+        public String plan;
+
+
         protected void Page_Load(object sender, EventArgs e)
         {
             try {
                    servicio = Session["Servicio"].ToString();
+                   paquete = Session["Plan"].ToString();
+                   plan = Session["Plan"].ToString();
                    message = Request.Params["message"].ToString();
             }catch(Exception ex){
                 message = "Zona segura activa";

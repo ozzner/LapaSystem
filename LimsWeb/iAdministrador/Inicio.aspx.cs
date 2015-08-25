@@ -34,6 +34,7 @@ namespace LimsWeb.iAdministrador
         protected string segment;
         protected string dir;
         protected string type;
+        protected string plans;
 
 
         protected void Page_Load(object sender, EventArgs e)
@@ -95,14 +96,33 @@ namespace LimsWeb.iAdministrador
                 txtNomRubro.Text = oEnt_Emp.NomRubro;
                 txtDireccion.Text = oEnt_Emp.Direccion;
                 txtDom.Text = oEnt_Emp.segmento;
+               
+
                 if (oEnt_Emp.Servicio)
                 {
                     txtUso.Text = "Servicio";
+                   
                 }
                 else
                 {
                     txtUso.Text = "Privado";
                 }
+
+                //Plan actual
+                if (oEnt_Emp.TipoUsoID == 1)
+                {
+                    txtPlanes.Text = "Gratuito";
+                   
+                }
+                else if (oEnt_Emp.TipoUsoID == 2)
+                {
+                    txtPlanes.Text = "Básico";
+                }
+                else {
+                    txtPlanes.Text = "Corporativo";
+                }
+
+                Session["Plan"] = txtPlanes.Text;
                 
                 //PUBLICIDAD INICIO 1
                 oEnt_Emp = oLN_Emp.ListarPubInicio1(ruc);
