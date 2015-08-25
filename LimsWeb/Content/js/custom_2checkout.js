@@ -19,11 +19,9 @@ $(document).ready(function () {
 
 
         //Paquetes
-        if (lapaPackage.text == 'Corporativo') {
-            alert("Es Corportativo: "  + lapaPackage.text());
+        if (lapaPackage.text == "Corporativo") {
             $("#corporativo_servicio_btn").attr("disabled", true).hide();
         } else {
-            alert("No es Corportativo: " + lapaPackage.text());
             $("#basico_servicio_btn").attr("disabled", true).hide();
         }
       
@@ -37,10 +35,8 @@ $(document).ready(function () {
 
         //Paquetes
         if (lapaPackage == 'Corporativo') {
-            alert("Es Corportativo: " + lapaPackage.text());
             $("#corporativo_empresa_btn").attr("disabled", true).hide();
         } else {
-            alert("No es Corportativo: " + lapaPackage.text());
             $("#basico_empresa_btn").attr("disabled", true).hide();
         }
 
